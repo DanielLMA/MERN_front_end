@@ -46,12 +46,12 @@ export default class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className="container">
+                <div className="container">
                     <div className="content">
                         <h1>Welcome</h1>
                         <Link to="/appointments" className="btn">Book Appointment</Link>
                     </div>
-                </div> */}
+                </div>
                 </body>
             </>
         )
