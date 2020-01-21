@@ -2,10 +2,11 @@ import React from "react"
 import './style.scss';
 import { Link } from "react-router-dom";
 
-export default class Header2 extends React.Component {
+export default class HomePage extends React.Component {
     render() {
         return (
             <>
+            <body>
                 <div className="menu-container">
                     <input type="checkbox" className="toggler"/>
                     <div className="hamburger" >
@@ -45,6 +46,13 @@ export default class Header2 extends React.Component {
                         </div>
                     </div>
                 </div>
+                {/* <div className="container">
+                    <div className="content">
+                        <h1>Welcome</h1>
+                        <Link to="/appointments" className="btn">Book Appointment</Link>
+                    </div>
+                </div> */}
+                </body>
             </>
         )
     }
