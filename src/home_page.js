@@ -1,13 +1,14 @@
 import React from "react"
 import './style.scss';
 import { Link } from "react-router-dom";
+import Header from "./header2.js"
 
 export default class HomePage extends React.Component {
     render() {
         return (
             <>
             <body>
-                <div className="menu-container">
+            <div className="menu-container">
                     <input type="checkbox" className="toggler"/>
                     <div className="hamburger" >
                         <div></div>

@@ -1,6 +1,6 @@
 import React from "react"
 import './style.scss';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import HomePage from "./home_page.js"
 import TitlePage from "./title_page.js"
 import AboutPage from "./about_page.js"
@@ -17,7 +17,7 @@ export default class App extends React.Component {
         return (
             <>
                 <BrowserRouter>
-                    <div>
+                    <Switch>
                         <Route exact path="/home" component={HomePage} />
                         <Route exact path="/about" component={AboutPage} />
                         <Route exact path="/barbers" component={BarberPage} />
@@ -27,9 +27,8 @@ export default class App extends React.Component {
                         <Route exact path="/seminars-training" component={SeminarsTrainingPage} />
                         <Route exact path="/services" component={ServicesPage} />
                         <Route exact path="/appointments" component={AppointmentsPage} />
-
                         <Route exact path="/titlepage" component={TitlePage} />
-                    </div>
+                    </Switch>
                 </BrowserRouter>
             </>
         )
