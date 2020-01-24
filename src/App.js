@@ -20,9 +20,11 @@ import ServicesPage from "./services_page.js"
 import AppointmentsPage from "./appointments_page.js" 
 import Register from "./components/auth/Register.js"
 import Login from "./components/auth/Login.js"
-
 import PrivateRoute from "./components/private-route/PrivateRoute";
+
+// import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+// Check for token to keep user logged in
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -42,21 +44,13 @@ if (localStorage.jwtToken) {
   }
 }
 
-
-
-
-
-
-
-
-
 export default class App extends React.Component {
     render() {
         return (
             <>
             <Provider store={store}>
                 <BrowserRouter>
-                    <Switch>
+                   <div>
                         <Route exact path="/home" component={HomePage} />
                         <Route exact path="/about" component={AboutPage} />
                         <Route exact path="/barbers" component={BarberPage} />
@@ -69,10 +63,12 @@ export default class App extends React.Component {
                         <Route exact path="/titlepage" component={TitlePage} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />
+                        <Route exact path="/dashboard" component={Dashboard} />
+
                         <Switch>
-                            <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                        </Switch>
-                    </Switch>
+                          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                      </Switch>
+                      </div>
                 </BrowserRouter>
             </Provider>
             </>
