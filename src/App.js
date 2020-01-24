@@ -63,12 +63,10 @@ export default class App extends React.Component {
                         <Route exact path="/titlepage" component={TitlePage} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />
-                        <Route exact path="/dashboard" component={Dashboard} />
-
                         <Switch>
                           <PrivateRoute exact path="/dashboard" component={Dashboard} />
                       </Switch>
-                      </div>
+                    </div>
                 </BrowserRouter>
             </Provider>
             </>
