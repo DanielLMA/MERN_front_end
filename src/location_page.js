@@ -12,29 +12,30 @@ export default class LocationPage extends React.Component {
                 >
             
 
-            <div class="content">
+            <div class="content-location">
                 <h1>LocationPage</h1> <br />
-                <img src={require('./maps.png')} alt="google maps"></img>
-
+                <div><img src={require('./maps.png')} alt="google maps"></img></div>
+                <div>
                 <p>
-                RAW BARBERSHOP | SHOP 3 45 STATION ST, NERANG QLD 4211
+                RAW BARBERSHOP | SHOP 3 45 STATION ST, NERANG QLD 4211<br />
 
-                0478831080
+                0478831080<br /> <br />
 
-                MONDAY 8:30AM – 5:00PM
+                MONDAY 8:30AM – 5:00PM<br />
 
-                TUESDAY 8:30AM-5:00PM
+                TUESDAY 8:30AM-5:00PM<br />
 
-                WEDNESDAY 8:30AM – 5:00PM
+                WEDNESDAY 8:30AM – 5:00PM<br />
 
-                THURSDAY 8:30AM – 5:00PM
+                THURSDAY 8:30AM – 5:00PM<br />
 
-                FRIDAY 8:30AM – 5:00PM
+                FRIDAY 8:30AM – 5:00PM<br />
 
-                SATURDAY 8:00AM – 1:00PM
+                SATURDAY 8:00AM – 1:00PM<br />
 
                 SUNDAY CLOSE
                 </p>
+                </div>
             </div>
             </div>
             </>
