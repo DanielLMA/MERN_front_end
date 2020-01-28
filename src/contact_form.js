@@ -15,7 +15,7 @@ export default class ContactForm extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('Message Submitted! Thank you ' + this.state.value);
+      alert('Message Submitted!');
       event.preventDefault();
     }
   

@@ -94,11 +94,14 @@ body {
             font-size: 4.3rem;
             margin-bottom: 0.8rem;
             color: white;
+            text-shadow: 2px 2px 2px #000000;
         }
         p {
             color: #fff;
             font-size: 1.2rem;
             font-weight: 100;
+            text-shadow: 2px 2px 2px #000000;
+
         }
     }
 
@@ -210,6 +213,7 @@ body {
     .contactForm{
         position: fixed;
         transition: ease-in;
+        width: 2fr;
     }
         div {
             position: absolute;
