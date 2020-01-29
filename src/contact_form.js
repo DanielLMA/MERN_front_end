@@ -14,11 +14,20 @@ export default class ContactForm extends React.Component {
       this.setState({value: event.target.value});
     }
   
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+      this.setState({value: event.target.value});
+    }
+
     handleSubmit(event) {
       alert('Message Submitted!');
       event.preventDefault();
-    }
-  
+    }  
+
     render() {
       return (
           <div class="contactForm">
@@ -43,3 +52,4 @@ export default class ContactForm extends React.Component {
       );
     }
   }
+  } 

@@ -29,6 +29,21 @@ body {
         // }
     }
     .contact-container {
+
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-image: url("./haircut_pic.jpg") no-repeat;
+
+        background-size: cover; 
+        background-position: 50% 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        // opacity: 0.2;
+    }
+    .about-container {
         position: relative;
         height: 100vh;
         width: 100vw;
@@ -133,9 +148,32 @@ body {
             font-size: 1.5rem;
             font-weight: 300;
             // text-shadow: 2px 2px 2px #000000;
+
         }
     }
 
+    .content-location{
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
+        max-width: 700px;
+        padding: 2rem;
+        position: grid;
+        z-index: 1;
+        h1 {
+            font-size: 4.3rem;
+            margin-bottom: 0.8rem;
+            color: white;
+            text-shadow: 2px 2px 2px #000000;
+        }
+        p {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 100;
+            text-shadow: 2px 2px 2px #000000;
+
+        }
+    }
+    
     .btn {
         padding: 0.75rem 1.25rem;
         margin-top: 0.8rem;
@@ -246,6 +284,11 @@ body {
         transition: ease-in;
         width: 2fr;
     }
+        .contactForm{
+            position: fixed;
+            transition: ease-in;
+            width: 2fr;
+        }
         div {
             position: absolute;
             width: 1600px;
