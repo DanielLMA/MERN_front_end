@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RegisterForm from "../../components/Forms/fields/RegistrationForm";
+import "./RegisterPage_style.scss"
 
 class RegisterPage extends Component {
     render() {
