@@ -10,7 +10,7 @@ export default class ServicesPage extends React.Component {
                 <div className="about-container" 
                 style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
                 >
-                    <div class="content">
+                    <div className="content">
                     <h1>Services</h1>
                     <p>WAITING FOR INFO FROM CLIENT</p> 
                     </div>

@@ -10,8 +10,8 @@ export default class GalleryPage extends React.Component {
                 <div className="about-container" 
                 style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
                 >
-                    <div class="content">
-                    <h1>Services</h1>
+                    <div className="content">
+                    <h1>Gallery</h1>
                     <p>WAITING FOR PICTURES FROM CLIENT</p> 
                     </div>
 
