@@ -3,6 +3,13 @@ import './style.scss';
 import { Link } from "react-router-dom";
 
 export default class Header2 extends React.Component {
+
+    handleLogout() {
+        // deletes token form localStorage
+        alert('Fake logout')
+        localStorage.removeItem('token')
+    }
+
     render() {
         return (
             <>
@@ -46,6 +53,9 @@ export default class Header2 extends React.Component {
                                     </li>
                                     <li>
                                         <Link to="/login">Login</Link>
+                                    </li>
+                                    <li>
+                                        <button onClick={this.handleLogout}>Logout</button>
                                     </li>
                                     <li>
                                         <Link to="/dashboard">Dashboard</Link>

@@ -30,7 +30,7 @@ class RegisterForm extends Component {
         
         // .catch(err => console.log(err))
         .then(res => { this.props.onRegister(res.data.token); 
-            this.props.history.push('/') })
+            this.props.history.push('/home') })
         .then(res => console.log(res))
         // .then(res => {
         //     this.props.setAuthToken(res.data.token);
