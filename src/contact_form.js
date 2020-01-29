@@ -5,15 +5,6 @@ export default class ContactForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {value: ''};
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,7 +17,7 @@ export default class ContactForm extends React.Component {
     handleSubmit(event) {
       alert('Message Submitted!');
       event.preventDefault();
-    }  
+    }
 
     render() {
       return (
@@ -51,5 +42,4 @@ export default class ContactForm extends React.Component {
         </div>
       );
     }
-  }
   } 
