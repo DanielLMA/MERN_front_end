@@ -2,7 +2,6 @@ import React from "react"
 import './style.scss';
 import Header2 from "./header2.js"
 
-
 export default class ServicesPage extends React.Component {
     render() {
         return (
