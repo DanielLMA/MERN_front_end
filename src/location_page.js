@@ -8,7 +8,7 @@ export default class LocationPage extends React.Component {
             <>
             <Header2/>
                 <div className="about-container" 
-                style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
+                // style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
                 >
             
 

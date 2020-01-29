@@ -113,24 +113,26 @@ body {
     .content-location{
         display: grid;
         grid-template-columns: 1fr, 1fr 1fr;
-        max-width: 700px;
+        justify-content: center;
+        max-width: 80%;
         padding: 2rem;
         position: grid;
+        font-family: Arial, Helvetica, sans-serif;
         z-index: 1;
         grid-template-areas:
-        "cLeft cRight";
+        "h1 h1 h1"
+        "cLeft cRight cRight";
         h1 {
             font-size: 4.3rem;
             margin-bottom: 0.8rem;
-            color: white;
-            text-shadow: 2px 2px 2px #000000;
+            color: black;
+            // text-shadow: 2px 2px 2px #000000;
         }
         p {
-            color: #fff;
-            font-size: 1.2rem;
-            font-weight: 100;
-            text-shadow: 2px 2px 2px #000000;
-
+            color: black;
+            font-size: 1.5rem;
+            font-weight: 300;
+            // text-shadow: 2px 2px 2px #000000;
         }
     }
 
