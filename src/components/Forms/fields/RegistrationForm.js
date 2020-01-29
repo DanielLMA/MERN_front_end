@@ -10,24 +10,43 @@ class RegisterForm extends Component {
     password: ""
   };
 
-  onFormSubmit = event => {
+  onFormSubmit = async event => {
     event.preventDefault();
     const { email, password } = this.state;
 
-    axios
-        .post('http://localhost:5000/register', { email, password })
-        // .then(res => console.log(res))
+  axios
+    .post("http://localhost:5000/auth/register", { email, password })
+    // try {
+    //     const response = await axios.post('http://localhost:5000/auth/register', { 
+    //         email,  
+    //         password 
+    //     })
+    //     this.props.onRegister(response.data.token, () =>
+    //         this.props.history.push("/")
+    //         )
+    // } catch (error) {
+    //     this.setState({ error })
+    // }
+        
         // .catch(err => console.log(err))
-        .then(res => { this.props.onRegister(res.data.token); this.props.history.push('/') })
-        .catch(err => console.error(err))
-  };
+        .then(res => { this.props.onRegister(res.data.token); 
+            this.props.history.push('/') })
+        .then(res => console.log(res))
+        // .then(res => {
+        //     this.props.setAuthToken(res.data.token);
+        //     this.props.history.push("/")
+        // }
+        // )
+        // .catch(err => console.error(err))
+  }
+
 
   onInputChange = (name, event) => {
     this.setState({ [name]: event.target.value });
   };
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const { email, password } = this.state;
 
     return (

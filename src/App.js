@@ -45,19 +45,23 @@ import { connect } from "react-redux"
 //   }
 // }
 
-class App extends React.Component {
+export default class App extends React.Component {
   state = {
     token: sessionStorage.getItem("token")
 }
 onRegister = (token) => {
+  //! add stringify to token? 
   sessionStorage.setItem("token", token)
   this.setState({ token })
 }
     render() {
+      const { token } = this.state;
         return (
             <> 
                 <BrowserRouter>
                    <div>
+                    { token && <h4>User is logged in! ${token}</h4>}
+                    <Switch>
                         <Route exact path="/home" component={HomePage} />
                         <Route exact path="/about" component={AboutPage} />
                         <Route exact path="/barbers" component={BarberPage} />
@@ -73,9 +77,10 @@ onRegister = (token) => {
                         }} />
                         {/* <Route exact path="/register" component={Register} /> */}
                         {/* <Route exact path="/login" component={Login} /> */}
-                        {/* <Switch>
+                        {/* 
                           <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                      </Switch> */}
+                      // </Switch> */}
+                      </Switch>
                     </div>
                 </BrowserRouter>
             </>
@@ -83,10 +88,10 @@ onRegister = (token) => {
     }
 }
 
-const mapStateToProps = (state) => {
-  return {
-      token: state.auth.token
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//       token: state.auth.token
+//   }
+// }
 
-export default connect(mapStateToProps)(App);
+// export default connect(mapStateToProps)(App);
