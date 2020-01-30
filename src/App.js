@@ -18,7 +18,7 @@ import SeminarsTrainingPage from "./seminars_training_page.js"
 import ServicesPage from "./services_page.js" 
 import AppointmentsPage from "./appointments_page.js" 
 import RegisterPage from "./views/pages/RegisterPage";
-import { connect } from "react-redux"
+// import { connect } from "react-redux"
 // import Register from "./components/auth/Register.js"
 // import Login from "./components/auth/Login.js"
 // import PrivateRoute from "./components/private-route/PrivateRoute";
