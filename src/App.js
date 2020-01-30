@@ -50,7 +50,6 @@ export default class App extends React.Component {
     token: sessionStorage.getItem("token")
 }
 onRegister = (token) => {
-  //! add stringify to token? 
   sessionStorage.setItem("token", token)
   this.setState({ token })
 }
