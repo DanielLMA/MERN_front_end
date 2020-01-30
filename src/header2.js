@@ -1,14 +1,34 @@
 import React from "react"
 import './style.scss';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 export default class Header2 extends React.Component {
 
-    handleLogout() {
-        // deletes token form localStorage
-        alert('Fake logout')
+    state = {
+        redirect: false
+      }
+
+      setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+
+    //Function to delete the token from localStorage. 
+      handleLogout() {
+        alert('Logging out')
         localStorage.removeItem('token')
     }
+
+    
+      renderRedirect = () => {
+        if (this.state.redirect) {
+            this.handleLogout()
+          return <Redirect to='/home' />
+        }
+      }
+
+
 
     render() {
         return (
@@ -55,7 +75,8 @@ export default class Header2 extends React.Component {
                                         <Link to="/login">Login</Link>
                                     </li>
                                     <li>
-                                        <button onClick={this.handleLogout}>Logout</button>
+                                        {this.renderRedirect()}
+                                        <button onClick={this.setRedirect}>Logout</button>
                                     </li>
                                     <li>
                                         <Link to="/dashboard">Dashboard</Link>
