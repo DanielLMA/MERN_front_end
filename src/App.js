@@ -18,6 +18,7 @@ import SeminarsTrainingPage from "./seminars_training_page.js"
 import ServicesPage from "./services_page.js" 
 import AppointmentsPage from "./appointments_page.js" 
 import RegisterPage from "./views/pages/RegisterPage";
+import LoginPage from "./views/pages/LoginPage";
 // import { connect } from "react-redux"
 // import Register from "./components/auth/Register.js"
 // import Login from "./components/auth/Login.js"
@@ -53,6 +54,11 @@ onRegister = (token) => {
   sessionStorage.setItem("token", token)
   this.setState({ token })
 }
+
+onLogin = (token) => {
+  sessionStorage.setItem("token", token)
+  this.setState({ token })
+}
     render() {
       const { token } = this.state;
         return (
@@ -71,6 +77,9 @@ onRegister = (token) => {
                         <Route exact path="/services" component={ServicesPage} />
                         <Route exact path="/appointments" component={AppointmentsPage} />
                         <Route exact path="/titlepage" component={TitlePage} />
+                        <Route exact path="/login" render={(props) => {
+                            return <LoginPage {...props} onLogin={this.onLogin}  />
+                        }}/>
                         <Route exact path="/register" render={(props) => {
                             return <RegisterPage {...props} onRegister={this.onRegister}  />
                         }} />

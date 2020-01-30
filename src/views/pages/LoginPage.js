@@ -1,19 +1,37 @@
-import React from "react";
-import { Link } from 'react-router-dom';
-import { Card, Logo, Form, Input, Button } from '../components/AuthForms';
+import React, { Component } from "react";
+import LoginForm from "../../components/Forms/fields/LoginForm";
 
-function Login() {
-  return (
-    <Card>
-      <Logo />
-      <Form>
-        <Input type="email" placeholder="email" />
-        <Input type="password" placeholder="password" />
-        <Button>Sign In</Button>
-      </Form>
-      <Link to="/signup">Don't have an account?</Link>
-    </Card>
-  );
+class LoginPage extends Component {
+    render() {
+        
+        return(
+            <div>
+                <h1>User Login</h1>
+                <LoginForm 
+                history={this.props.history}
+                onLogin={this.props.onLogin} />
+            </div>
+        );
+    }
 }
 
-export default Login;
+export default LoginPage;
+
+
+
+
+// function Login() {
+//   return (
+//     <Card>
+//       <Logo />
+//       <Form>
+//         <Input type="email" placeholder="email" />
+//         <Input type="password" placeholder="password" />
+//         <Button>Sign In</Button>
+//       </Form>
+//       <Link to="/signup">Don't have an account?</Link>
+//     </Card>
+//   );
+// }
+
+// export default Login;
