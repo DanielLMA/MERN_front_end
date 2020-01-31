@@ -93,9 +93,11 @@ export default class Header2 extends React.Component {
                                     <li>
                                         <Link 
                                             to="/login" 
-                                            onClick={this.handleLogout}>
+                                            onClick={this.handleLogout}
+                                           >
                                             Logout
                                         </Link>
+                                        
                                         {/* {this.renderRedirect()} */}
                                         {/* <button onClick={this.handleLogout}>Logout</button> */}
                                     </li>
