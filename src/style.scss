@@ -106,23 +106,33 @@ body {
 
     .content-location{
         display: grid;
-        grid-template-columns: 1fr, 1fr;
-        max-width: 700px;
+        grid-template-rows: 20vh 1fr auto;
+        grid-template-columns: 1fr 10% 1fr;
         padding: 2rem;
-        position: grid;
+        // position: grid;
         z-index: 1;
+        grid-template-areas: 
+        "title title title"
+        "img . p"
+        ;
         h1 {
+            grid-area: title;
             font-size: 4.3rem;
             margin-bottom: 0.8rem;
-            color: white;
-            text-shadow: 2px 2px 2px #000000;
+            color: black;
+            // text-shadow: 2px 2px 2px #000000;
         }
         p {
-            color: #fff;
-            font-size: 1.2rem;
+            grid-area: p;
+            color: black;
+            font-size: 1.3rem;
             font-weight: 100;
-            text-shadow: 2px 2px 2px #000000;
+            line-height: 5vh;
+            // text-shadow: 2px 2px 2px #000000;
 
+        }
+        img {
+            grid-area: img;
         }
     }
     
