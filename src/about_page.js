@@ -7,8 +7,13 @@ export default class AboutPage extends React.Component {
         return (
             <>
             <body>
-            <Header2/>
-                <div className="about-container" >
+            <Header2 
+            {...this.props}
+            history={this.props.history}
+            />
+                <div className="about-container" 
+                style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
+                >
                 <div className="content">
                     <h1>About</h1>
                     <p>RAW BARBERSHOP IS A STUDIO MADE UP OF PASSIONATE HAIR STYLISTS, SPECIALIZING IN MENS HAIRDRESSING, TRADITIONAL & MODERN BARBERING. WE ARE DEDICATED TO PROVIDING QUALITY HAIRCUTS AND SERVICE TO EVERYONE WHO WALKS THROUGH OUR DOORS. OUR TEAM IS VERSITILE TO CATER FOR ALL TYPES OF HAIR WHILST HAVING AN IN-DEPTH KNOWLEDGE OF TRADTIONAL AND CONTEMPORY HAIRSTYLES.</p>

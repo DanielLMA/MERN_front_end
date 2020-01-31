@@ -1,32 +1,48 @@
 import React from "react"
 import './style.scss';
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 export default class Header2 extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-    state = {
-        redirect: false
-      }
+    // redirectToHome = () => {
+    //     const { history } = this.props;
+    //     if(history) 
+    //     console.log("history is present")
+    //     // history.push('/home');
+    //    }
 
-      setRedirect = () => {
-        this.setState({
-          redirect: true
-        })
-      }
+    // state = {
+    //     redirect: false
+    //   }
+
+    //   setRedirect = () => {
+    //     this.setState({
+    //       redirect: true
+    //     })
+    //   }
 
     //Function to delete the token from localStorage. 
       handleLogout() {
-        alert('Logging out')
-        localStorage.removeItem('token')
+        sessionStorage.removeItem('token')
+        // this.redirectToHome()
+        // return <Redirect to='/login' />
+        // Redirect user after logout
+    //    this.props.history.push('/login')
+        //console.log(props)
     }
 
     
-      renderRedirect = () => {
-        if (this.state.redirect) {
-            this.handleLogout()
-          return <Redirect to='/home' />
-        }
-      }
+    //   renderRedirect = () => {
+    //     return <Redirect to='/home' />
+    //     // if (this.state.redirect) {
+    //     //     this.handleLogout()
+    //     //   return <Redirect to='/home' />
+    //     // }
+    //   }
 
 
 
@@ -75,8 +91,15 @@ export default class Header2 extends React.Component {
                                         <Link to="/login">Login</Link>
                                     </li>
                                     <li>
-                                        {this.renderRedirect()}
-                                        <button onClick={this.setRedirect}>Logout</button>
+                                        <Link 
+                                            to="/login" 
+                                            onClick={this.handleLogout}
+                                           >
+                                            Logout
+                                        </Link>
+                                        
+                                        {/* {this.renderRedirect()} */}
+                                        {/* <button onClick={this.handleLogout}>Logout</button> */}
                                     </li>
                                     <li>
                                         <Link to="/dashboard">Dashboard</Link>

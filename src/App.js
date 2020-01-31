@@ -18,10 +18,12 @@ import SeminarsTrainingPage from "./seminars_training_page.js"
 import ServicesPage from "./services_page.js" 
 import AppointmentsPage from "./appointments_page.js" 
 import RegisterPage from "./views/pages/RegisterPage";
-import { connect } from "react-redux"
+import LoginPage from "./views/pages/LoginPage";
+// import { connect } from "react-redux"
 // import Register from "./components/auth/Register.js"
 // import Login from "./components/auth/Login.js"
 // import PrivateRoute from "./components/private-route/PrivateRoute";
+
 
 // // import PrivateRoute from "./components/private-route/PrivateRoute";
 // import Dashboard from "./components/dashboard/Dashboard";
@@ -53,13 +55,23 @@ onRegister = (token) => {
   sessionStorage.setItem("token", token)
   this.setState({ token })
 }
+
+onLogin = (token) => {
+  sessionStorage.setItem("token", token)
+  this.setState({ token })
+}
     render() {
-      const { token } = this.state;
+      // const { token } = this.state;
         return (
             <> 
                 <BrowserRouter>
+
+
+
+
+
                    <div>
-                    { token && <h4>User is logged in! ${token}</h4>}
+                    {/* { token && <h4>User is logged in! ${token}</h4>} */}
                     <Switch>
                         <Route exact path="/home" component={HomePage} />
                         <Route exact path="/about" component={AboutPage} />
@@ -71,6 +83,9 @@ onRegister = (token) => {
                         <Route exact path="/services" component={ServicesPage} />
                         <Route exact path="/appointments" component={AppointmentsPage} />
                         <Route exact path="/titlepage" component={TitlePage} />
+                        <Route exact path="/login" render={(props) => {
+                            return <LoginPage {...props} onLogin={this.onLogin}  />
+                        }}/>
                         <Route exact path="/register" render={(props) => {
                             return <RegisterPage {...props} onRegister={this.onRegister}  />
                         }} />
