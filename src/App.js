@@ -65,7 +65,7 @@ onLogin = (token) => {
             <> 
                 <BrowserRouter>
                    <div>
-                    { token && <h4>User is logged in! ${token}</h4>}
+                    {/* { token && <h4>User is logged in! ${token}</h4>} */}
                     <Switch>
                         <Route exact path="/home" component={HomePage} />
                         <Route exact path="/about" component={AboutPage} />

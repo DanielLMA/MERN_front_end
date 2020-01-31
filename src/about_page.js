@@ -7,7 +7,10 @@ export default class AboutPage extends React.Component {
         return (
             <>
             <body>
-            <Header2/>
+            <Header2 
+            {...this.props}
+            history={this.props.history}
+            />
                 <div className="about-container" 
                 style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
                 >
