@@ -7,7 +7,7 @@ export default class BarberPage extends React.Component {
         return (
             <>
             <body>
-            <Header/>
+            <Header />
             <div className="barber-container">
                 <div className="barber-left">
 
