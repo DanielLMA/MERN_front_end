@@ -24,6 +24,7 @@ import LoginPage from "./views/pages/LoginPage";
 // import Login from "./components/auth/Login.js"
 // import PrivateRoute from "./components/private-route/PrivateRoute";
 
+
 // // import PrivateRoute from "./components/private-route/PrivateRoute";
 // import Dashboard from "./components/dashboard/Dashboard";
 // // Check for token to keep user logged in
@@ -60,10 +61,15 @@ onLogin = (token) => {
   this.setState({ token })
 }
     render() {
-      const { token } = this.state;
+      // const { token } = this.state;
         return (
             <> 
                 <BrowserRouter>
+
+
+
+
+
                    <div>
                     {/* { token && <h4>User is logged in! ${token}</h4>} */}
                     <Switch>
