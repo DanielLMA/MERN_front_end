@@ -8,13 +8,13 @@ export default class LocationPage extends React.Component {
             <>
              <Header2/>
                 <div className="about-container" 
-                style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
+                // style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
                 >
 
 
             <div class="content-location">
                 <h1>LocationPage</h1> <br />
-                {/* <div><img src={require('./maps.png')} alt="google maps"></img></div> */}
+                <div><img src={require('./maps.png')} alt="google maps"></img></div>
 
                 <div>
 
