@@ -9,7 +9,7 @@ export default class ContactPage extends React.Component {
             <>
             <body>
 
-            <div className="content" >            
+            <div className="contact-content" >            
             <Header2/>                
             <h1>Contact Us</h1> 
                 <ContactForm/>
