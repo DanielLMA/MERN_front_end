@@ -37,6 +37,7 @@ export default class ContactForm extends React.Component {
             Message:
             <textarea />
            </label>
+           < br />
           <input type="submit" value="Submit" />
         </form>
         </div>

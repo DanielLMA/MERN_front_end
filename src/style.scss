@@ -108,9 +108,10 @@ body {
     .contact-content {
         display: grid;
         justify-content: center;
-        position: relative;
-        top: 50%;
-        width: 80vw;
+        justify-items: center;
+        position: absolute;
+        top: 25%;
+        width: 100vw;
         grid-template-rows: 30% 1fr;
         grid-template-areas: 
         "heading"
