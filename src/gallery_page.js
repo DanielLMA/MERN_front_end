@@ -3,6 +3,7 @@ import './style.scss';
 // import Header2 from "./header2.js"
 import {Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 import axios from "axios"
+// import base64 from "base-64"
 
 export default class GalleryPage extends React.Component {
     constructor() {
@@ -13,9 +14,20 @@ export default class GalleryPage extends React.Component {
     }
     componentDidMount() {
         axios.get('https://res.cloudinary.com/dadewebdev/image/list/raw_barbershop.json')
-            .then(res => console.log(res.data))
+            .then(res => { console.log(res.data)
+            this.setState({ gallery: res.data})
+        })
+            
             .catch(console.log)
+
+//         fetch('https://res.cloudinary.com/dadewebdev/image/list/raw_barbershop.json', {
+//   method: 'get',
+//   headers: {
+//     'Authorization': 'Basic ' + base64.encode("591787363579589" + ":" + "t0Lt5nA7LvI_3PUf6I0FibVqPl4"),
+//   },
+// }).then(res => res.json())
     }
+
     uploadWidget() {
         window.cloudinary.openUploadWidget({
             cloudName: 'dadewebdev',
@@ -36,7 +48,7 @@ export default class GalleryPage extends React.Component {
                     <Image>
                         <Transformation width="200" crop="scale" angle="10"/>
                     </Image>
-            </CloudinaryContext>
+            </CloudinaryContext>      
             {/* <Image cloudName="dadewebdev" publicId="dfpeAG4E86f3GX33Nm3yEBFN" width="200" crop="scale"/> */}
                 <div className="about-container" 
                 style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
