@@ -13,7 +13,7 @@ export default class LocationPage extends React.Component {
 
 
             <div className="content-location">
-                <h1 id="title">LocationPage</h1> <br />
+                <h1 id="title">Location</h1> <br />
                 <img src={require('./maps.png')} alt="google maps"></img>
 
                 <div>
