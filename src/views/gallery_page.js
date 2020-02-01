@@ -1,5 +1,4 @@
 import React from "react"
-import './style.scss';
 // import Header2 from "./header2.js"
 import {Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 import axios from "axios"
@@ -13,8 +12,20 @@ export default class GalleryPage extends React.Component {
         }
     }
     componentDidMount() {
-        axios.get('https://res.cloudinary.com/dadewebdev/image/list/raw_barbershop.json')
-            .then(res => { console.log(res.data)
+        const config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        }
+        axios({
+            url: 'https://res.cloudinary.com/dadewebdev/image/fetch',
+            method: 'GET',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, DELETE',
+                'Access-Control-Allow-Headers': 'Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type',
+                'Accept': 'application/x-www-form-urlencoded',
+                'Content-Type':'application/x-www-form-urlencoded'
+            }
+        }).then(res => { console.log(res.data)
             this.setState({ gallery: res.data})
         })
             
@@ -51,7 +62,7 @@ export default class GalleryPage extends React.Component {
             </CloudinaryContext>      
             {/* <Image cloudName="dadewebdev" publicId="dfpeAG4E86f3GX33Nm3yEBFN" width="200" crop="scale"/> */}
                 <div className="about-container" 
-                style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
+                style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
                 >
                     <div className="content">
                     <h1>Gallery</h1>
