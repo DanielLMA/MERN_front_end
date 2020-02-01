@@ -8,20 +8,20 @@ export default class LocationPage extends React.Component {
             <>
              <Header2/>
                 <div className="about-container" 
-                style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
+                // style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
                 >
 
 
-            <div class="content-location">
-                <h1>LocationPage</h1> <br />
-                {/* <div><img src={require('./maps.png')} alt="google maps"></img></div> */}
+            <div className="content-location">
+                <h1 id="title">Location</h1> <br />
+                <img src={require('./maps.png')} alt="google maps"></img>
 
                 <div>
 
                 <p>
                 RAW BARBERSHOP | SHOP 3 45 STATION ST, NERANG QLD 4211<br />
 
-                0478831080<br /> <br />
+                0478831080<br /> 
 
                 MONDAY 8:30AM – 5:00PM<br />
 
