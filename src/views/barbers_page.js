@@ -1,6 +1,5 @@
 import React from "react"
-import './style.scss';
-import Header from "./header2.js"
+import Header from "./../header2.js"
 
 export default class BarberPage extends React.Component {
     render() {

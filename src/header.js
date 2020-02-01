@@ -1,6 +1,6 @@
 import React from "react"
 import './style.scss';
-import logo from "./raw_logo_black.png"
+import logo from "./views/imagesraw_logo_black.png"
 
 export default class Header extends React.Component {
     render() {

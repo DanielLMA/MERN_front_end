@@ -1,7 +1,6 @@
 import React from "react"
-import './style.scss';
 import { Link } from "react-router-dom";
-import Header from "./header2.js"
+import Header from "./../header2.js"
 import Axios from "axios";
 
 export default class HomePage extends React.Component {

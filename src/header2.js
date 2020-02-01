@@ -2,6 +2,9 @@ import React from "react"
 import './style.scss';
 import { Link } from "react-router-dom";
 
+import LoggedInRoutes from './auth/LoggedInRoutes'
+import LoggedOutRoutes from './auth/LoggedOutRoutes'
+
 
 export default class Header2 extends React.Component {
     constructor(props) {
@@ -35,6 +38,11 @@ export default class Header2 extends React.Component {
         //console.log(props)
     }
 
+    isLoggedIn() {
+      const token = sessionStorage.getItem('token');
+      if (token) return true;
+    }
+
     
     //   renderRedirect = () => {
     //     return <Redirect to='/home' />
@@ -47,6 +55,8 @@ export default class Header2 extends React.Component {
 
 
     render() {
+
+        const otherLinks = this.isLoggedIn() ? <LoggedInRoutes /> : <LoggedOutRoutes />
         return (
             <>
                 <div className="menu-container">
@@ -73,9 +83,6 @@ export default class Header2 extends React.Component {
                                         <Link to="/gallery">Gallery</Link>
                                     </li>
                                     <li>
-                                        <Link to="/appointments">Create Appointment</Link>
-                                    </li>
-                                    <li>
                                         <Link to="/seminars-training">Seminars - Training</Link>
                                     </li>
                                     <li>
@@ -85,25 +92,9 @@ export default class Header2 extends React.Component {
                                         <Link to="/location">Location</Link>
                                     </li>
                                     <li>
-                                        <Link to="/register">Register</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/login">Login</Link>
-                                    </li>
-                                    <li>
-                                        <Link 
-                                            to="/login" 
-                                            onClick={this.handleLogout}
-                                           >
-                                            Logout
-                                        </Link>
-                                        
-                                        {/* {this.renderRedirect()} */}
-                                        {/* <button onClick={this.handleLogout}>Logout</button> */}
-                                    </li>
-                                    <li>
                                         <Link to="/dashboard">Dashboard</Link>
                                     </li>
+                                    { otherLinks }
                                 </ul>
                         </div>
                     </div>

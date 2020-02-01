@@ -1,6 +1,5 @@
 import React from "react"
-import './style.scss';
-import Header2 from "./header2.js"
+import Header2 from "./../header2.js"
 
 export default class AboutPage extends React.Component {
     render() {
@@ -12,7 +11,7 @@ export default class AboutPage extends React.Component {
             history={this.props.history}
             />
                 <div className="about-container" 
-                style={{backgroundImage: 'url(' + require('./haircut_pic.jpg') + ')'}}
+                style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
                 >
                 <div className="content">
                     <h1>About</h1>
