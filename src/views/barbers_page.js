@@ -1,11 +1,12 @@
 import React from "react"
 import Header from "./../header2.js"
 import "./barbers_page_style.scss"
+import FooterPage from "./footer.js"
 
 export default class BarberPage extends React.Component {
     render() {
         return (
-            <React.Fragment>
+            <>
             
             {/* <Header /> */}
             <div className="barber-container">
@@ -40,12 +41,9 @@ export default class BarberPage extends React.Component {
                         </h6>
                     </div>
                 </div>
-               
-                <div id="bottom">
-                   footer?
-                </div>
             </div>
-            </React.Fragment>
+            <FooterPage />
+            </>
         )
     }
 }

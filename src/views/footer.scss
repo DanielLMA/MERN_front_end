@@ -1,0 +1,32 @@
+footer {
+    .link {
+        text-decoration: none;
+        color: rgb(233, 233, 233);
+    }
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(auto) minmax(auto);
+
+    #footer-box-2 {
+        justify-self: center;
+        img {
+            margin: 20px;
+            min-height: 50px;
+            max-height: 100px;
+        }
+    }
+    #footer-links {
+
+        padding: 20px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        width: 100vw;
+        ul {
+            list-style-type: none;
+            li {
+                padding: 5px;
+            }
+        }
+    }
+}
