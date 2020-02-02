@@ -9,11 +9,11 @@ const LoggedInRoutes = () => {
     return (
         <React.Fragment>
             <li>
-                <Link to="/appointments">Create Appointment</Link>
+                <Link className="link" to="/appointments">Create Appointment</Link>
             </li>
             <li>
                 <Link 
-                    to="/login" 
+                    className="link" to="/login" 
                     onClick={handleLogout}
                     >
                     Logout
