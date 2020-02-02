@@ -1,7 +1,6 @@
 import React from "react"
-import './style.scss';
 import { Link } from "react-router-dom";
-import Header from "./header2.js"
+import Header from "./../header2.js"
 import Axios from "axios";
 
 export default class HomePage extends React.Component {
@@ -24,7 +23,7 @@ export default class HomePage extends React.Component {
                 <Header/>
                 <div className="container">
                     <div className="content">
-                        <h1>Welcome</h1><br />
+                        <h1>Welcome</h1>
                         <Link to="/appointments" className="btn">Book Appointment</Link>
                     </div>
                 </div>
