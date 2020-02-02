@@ -1,4 +1,5 @@
 import React from "react"
+import axios from "axios"
 
 export default class ContactForm extends React.Component {
     constructor(props) {
@@ -29,7 +30,15 @@ export default class ContactForm extends React.Component {
 
     //refactor this to make it more DRY
 
-    handleSubmit(event) {
+    async handleSubmit(event) {
+
+      const { email, name, message} = this.state
+      const form = await axios.post('/api/form', {
+        email,
+        name,
+        message
+      })
+
       alert('Message Submitted!  ');
       event.preventDefault();
     }
