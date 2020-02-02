@@ -35,6 +35,7 @@ export default class ContactForm extends React.Component {
     }
 
     render() {
+      const { email, name, message} = this.state //destructured values
       return (
           <div className="contactForm">
         <form onSubmit={this.handleSubmit}>
@@ -42,7 +43,7 @@ export default class ContactForm extends React.Component {
             Email:
             <input 
             type="text" 
-            value={this.state.email} 
+            value={email} 
             onChange={this.handleEmail}
             />
           </label>
@@ -51,7 +52,7 @@ export default class ContactForm extends React.Component {
             Name:
             <input 
             type="text" 
-            value={this.state.name}
+            value={name}
             onChange={this.handleName} 
             />
           </label>
@@ -59,7 +60,7 @@ export default class ContactForm extends React.Component {
           <label>
             Message:
             <textarea 
-            value={this.state.message} 
+            value={message} 
             onChange={this.handleMessage}
             />
            </label>
