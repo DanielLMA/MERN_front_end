@@ -20,7 +20,7 @@ export default class ContactForm extends React.Component {
 
     render() {
       return (
-          <div class="contactForm">
+          <div className="contactForm">
         <form onSubmit={this.handleSubmit}>
           <label>
             Email:
@@ -36,6 +36,7 @@ export default class ContactForm extends React.Component {
             Message:
             <textarea />
            </label>
+           <br />
           <input type="submit" value="Submit" />
         </form>
         </div>
