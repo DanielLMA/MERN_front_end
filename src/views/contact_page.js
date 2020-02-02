@@ -1,12 +1,13 @@
 import React from "react"
 import Header2 from "./../header2.js"
 import ContactForm from "./contact_form.js"
+import FooterPage from "./footer.js"
+
 
 export default class ContactPage extends React.Component {
     render() {
         return (
             <>
-            {/* <body> */}
 
             <div className="content" >            
             <Header2/>                
@@ -14,8 +15,7 @@ export default class ContactPage extends React.Component {
                 <ContactForm/>
             </div>
        
-
-            {/* </body> */}
+            <FooterPage/>
             </>
         )
     }
