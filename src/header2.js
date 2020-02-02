@@ -91,9 +91,6 @@ export default class Header2 extends React.Component {
                                     <li>
                                         <Link to="/location">Location</Link>
                                     </li>
-                                    <li>
-                                        <Link to="/dashboard">Dashboard</Link>
-                                    </li>
                                     { otherLinks }
                                 </ul>
                         </div>
