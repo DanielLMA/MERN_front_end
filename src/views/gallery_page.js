@@ -16,7 +16,7 @@ export default class GalleryPage extends React.Component {
             headers: {'Access-Control-Allow-Origin': '*'}
         }
         axios({
-            url: 'https://res.cloudinary.com/dadewebdev/image/fetch',
+            url: 'https://res.cloudinary.com/dadewebdev/image/list/raw_barbershop.json',
             method: 'GET',
             headers: {
                 'Access-Control-Allow-Origin': '*',
