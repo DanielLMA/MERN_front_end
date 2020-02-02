@@ -19,6 +19,7 @@ import ServicesPage from "./views/services_page.js"
 import AppointmentsPage from "./views/appointments_page.js" 
 import RegisterPage from "./views/pages/RegisterPage";
 import LoginPage from "./views/pages/LoginPage";
+import FooterPage from "./views/footer.js"
 // import { connect } from "react-redux"
 // import Register from "./components/auth/Register.js"
 // import Login from "./components/auth/Login.js"
@@ -86,6 +87,8 @@ onLogin = (token) => {
                         <Route exact path="/login" render={(props) => {
                             return <LoginPage {...props} onLogin={this.onLogin}  />
                         }}/>
+                        {/* test. delete after done  */}
+                        <Route exact path="/footer" component={FooterPage} />
                         <Route exact path="/register" render={(props) => {
                             return <RegisterPage {...props} onRegister={this.onRegister}  />
                         }} />

@@ -5,10 +5,10 @@ const LoggedOutRoutes = (userAuth) => {
     return (
         <React.Fragment>
             <li>
-                <Link to="/register">Register</Link>
+                <Link className="link"  to="/register">Register</Link>
             </li>
             <li>
-                <Link to="/login">Login</Link>
+                <Link className="link" to="/login">Login</Link>
             </li>
         </React.Fragment>
     )
