@@ -6,7 +6,7 @@ export default class ContactPage extends React.Component {
     render() {
         return (
             <>
-            <body>
+            {/* <body> */}
 
             <div className="content" >            
             <Header2/>                
@@ -15,7 +15,7 @@ export default class ContactPage extends React.Component {
             </div>
        
 
-            </body>
+            {/* </body> */}
             </>
         )
     }
