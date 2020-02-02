@@ -7,18 +7,19 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import { Provider } from "react-redux";
 // import store from "./store";
 
-import HomePage from "./home_page.js"
-import TitlePage from "./title_page.js"
-import AboutPage from "./about_page.js"
-import BarberPage from "./barbers_page.js" 
-import ContactPage from "./contact_page.js" 
-import GalleryPage from "./gallery_page.js" 
-import LocationPage from "./location_page.js" 
-import SeminarsTrainingPage from "./seminars_training_page.js" 
-import ServicesPage from "./services_page.js" 
-import AppointmentsPage from "./appointments_page.js" 
+import HomePage from "./views/home_page.js"
+import TitlePage from "./views/title_page.js"
+import AboutPage from "./views/about_page.js"
+import BarberPage from "./views/barbers_page.js" 
+import ContactPage from "./views/contact_page.js" 
+import GalleryPage from "./views/gallery_page.js" 
+import LocationPage from "./views/location_page.js" 
+import SeminarsTrainingPage from "./views/seminars_training_page.js" 
+import ServicesPage from "./views/services_page.js" 
+import AppointmentsPage from "./views/appointments_page.js" 
 import RegisterPage from "./views/pages/RegisterPage";
 import LoginPage from "./views/pages/LoginPage";
+import FooterPage from "./views/footer.js"
 // import { connect } from "react-redux"
 // import Register from "./components/auth/Register.js"
 // import Login from "./components/auth/Login.js"
@@ -86,6 +87,8 @@ onLogin = (token) => {
                         <Route exact path="/login" render={(props) => {
                             return <LoginPage {...props} onLogin={this.onLogin}  />
                         }}/>
+                        {/* test. delete after done  */}
+                        <Route exact path="/footer" component={FooterPage} />
                         <Route exact path="/register" render={(props) => {
                             return <RegisterPage {...props} onRegister={this.onRegister}  />
                         }} />
