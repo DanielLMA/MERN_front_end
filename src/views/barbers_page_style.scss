@@ -1,25 +1,22 @@
-div {
+body {
+    overflow: auto;
 .barber-container {
     background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-rows: 10% 1fr 1fr;
-    height: 100vh;
-    width: 100vw;
+    height: auto;
     font-family: Work Sans,sans-serif;
     font-weight: 700;
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-  
-
-
     color: #333333;
     #top {
         font-size: 1rem;
     }
     #central-content {
         h3 {
-            padding-bottom: 50px;
+            padding-bottom: 10px;
         }
         font-size: 3rem;
         h6 { 
@@ -28,12 +25,12 @@ div {
             font-size: 21px;
             font-weight: 100;
             line-height: 36px;
+            padding-bottom: 100px;
         }
         img {
             border-radius: 50%;
             height: 200px;
         }
-       
     }
     #bottom {
         background-color: orange;
