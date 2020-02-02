@@ -1,11 +1,12 @@
 import React from "react"
 import Header2 from "./../header2.js"
+import FooterPage from "./footer.js"
 
 export default class AboutPage extends React.Component {
     render() {
         return (
             <>
-            <body>
+          
             <Header2 
             {...this.props}
             history={this.props.history}
@@ -21,9 +22,10 @@ export default class AboutPage extends React.Component {
                     <br />
                     <p>WE STRIVE TO PROVIDE OUR CLIENTELE WITH THE HIGHEST QUALITY SERVICE AND BE LEAVING OUR STUDIO WITH THE UTMOST SATISFACTION.</p>
                 </div>
-
+   
+                <FooterPage />
                 </div>
-            </body>
+                
             </>
         )
     }

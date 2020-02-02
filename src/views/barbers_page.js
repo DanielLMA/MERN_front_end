@@ -41,8 +41,9 @@ export default class BarberPage extends React.Component {
                         </h6>
                     </div>
                 </div>
+                <FooterPage />
             </div>
-            <FooterPage />
+            
             </>
         )
     }
