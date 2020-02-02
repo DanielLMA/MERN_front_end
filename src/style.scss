@@ -127,6 +127,9 @@ body {
 
     .contactForm {
         grid-area: form;
+        line-height: 5vh;
+        z-index: 15; //was previously sitting behind the header 
+
     }
 
     .content-location{
