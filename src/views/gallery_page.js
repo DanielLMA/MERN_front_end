@@ -13,19 +13,9 @@ export default class GalleryPage extends React.Component {
         }
     }
     componentDidMount() {
-        // const config = {
-        //     headers: {'Access-Control-Allow-Origin': '*'}
-        // }
         axios({
             url: 'http://localhost:5000/images',
             method: 'GET',
-            // headers: {
-                // 'Access-Control-Allow-Origin': '*',
-                // 'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, DELETE',
-                // 'Access-Control-Allow-Headers': 'Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type',
-                // 'Accept': 'application/x-www-form-urlencoded',
-                // 'Content-Type':'application/x-www-form-urlencoded'
-            // }.
         }).then(res => {
             this.setState({ gallery: res.data})
         })
