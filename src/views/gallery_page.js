@@ -1,6 +1,6 @@
 import React from "react"
-// import Header2 from "./header2.js"
-import {Image, CloudinaryContext, Transformation } from 'cloudinary-react'
+// import Header2 from "./../header2.js"
+import {Image, CloudinaryContext} from 'cloudinary-react'
 import axios from "axios"
 // import base64 from "base-64"
 
@@ -13,9 +13,9 @@ export default class GalleryPage extends React.Component {
         }
     }
     componentDidMount() {
-        const config = {
-            headers: {'Access-Control-Allow-Origin': '*'}
-        }
+        // const config = {
+        //     headers: {'Access-Control-Allow-Origin': '*'}
+        // }
         axios({
             url: 'http://localhost:5000/images',
             method: 'GET',
@@ -56,15 +56,8 @@ export default class GalleryPage extends React.Component {
         return (
             <>
             {/* <Header2/> */}
-            <CloudinaryContext cloudName="dadewebdev">
-            {this.state.gallery.map(photo => (
-                <Image publicId={photo.slug} />
-                        
-
-            ))}
-            </CloudinaryContext>      
+   
             
-                        {/* <Transformation width="200" crop="scale" angle="10"/> */}
                     {/* </Image> */}
             {/* <Image cloudName="dadewebdev" publicId="dfpeAG4E86f3GX33Nm3yEBFN" width="200" crop="scale"/> */}
                 <div className="about-container" 
@@ -75,7 +68,15 @@ export default class GalleryPage extends React.Component {
                     <button
                         onClick={this.uploadWidget.bind(this)}
                     >Upload Image</button>
-                    <p>WAITING FOR PICTURES FROM CLIENT</p> 
+                    <p>Gallery</p> 
+                    <CloudinaryContext cloudName="dadewebdev">
+            {this.state.gallery.map(photo => (
+                <Image publicId={photo.slug} width="200" crop="scale" />
+                // <Transformation width="200" crop="scale" angle="10"/>
+                        
+
+            ))}
+            </CloudinaryContext>   
                     </div>
 
                 </div>
