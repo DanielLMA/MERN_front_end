@@ -7,9 +7,9 @@ import LoggedInRoutes from './../auth/LoggedInRoutes'
 import LoggedOutRoutes from './../auth/LoggedOutRoutes'
 
 export default class FooterPage extends React.Component {
-    constructor (props) {
-        super(props)
-    }
+    // constructor (props) {
+    //     super(props)
+    // }
 
     handleLogout() {
         sessionStorage.removeItem('token')
