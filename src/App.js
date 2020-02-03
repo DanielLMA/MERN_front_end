@@ -8,13 +8,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import store from "./store";
 
 import HomePage from "./views/home_page.js"
-import TitlePage from "./views/title_page.js"
 import AboutPage from "./views/about_page.js"
 import BarberPage from "./views/barbers_page.js" 
 import ContactPage from "./views/contact_page.js" 
 import GalleryPage from "./views/gallery_page.js" 
 import LocationPage from "./views/location_page.js" 
-import SeminarsTrainingPage from "./views/seminars_training_page.js" 
 import ServicesPage from "./views/services_page.js" 
 import AppointmentsPage from "./views/appointments_page.js" 
 import RegisterPage from "./views/pages/RegisterPage";
@@ -79,10 +77,8 @@ onLogin = (token) => {
                         <Route exact path="/contact" component={ContactPage} />
                         <Route exact path="/gallery" component={GalleryPage} />
                         <Route exact path="/location" component={LocationPage} />
-                        <Route exact path="/seminars-training" component={SeminarsTrainingPage} />
                         <Route exact path="/services" component={ServicesPage} />
                         <Route exact path="/appointments" component={AppointmentsPage} />
-                        <Route exact path="/titlepage" component={TitlePage} />
                         <Route exact path="/login" render={(props) => {
                             return <LoginPage {...props} onLogin={this.onLogin}  />
                         }}/>

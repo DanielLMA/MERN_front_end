@@ -83,9 +83,6 @@ export default class Header2 extends React.Component {
                                         <Link to="/gallery">Gallery</Link>
                                     </li>
                                     <li>
-                                        <Link to="/seminars-training">Seminars - Training</Link>
-                                    </li>
-                                    <li>
                                         <Link to="/contact">Contact</Link>
                                     </li>
                                     <li>
