@@ -31,18 +31,29 @@ export default class ContactForm extends React.Component {
 
     //refactor this to make it more DRY
 
+    handleShow = async (event) => {
+      const form = await LocalApi.get('/form')
+    }
+
     handleSubmit = async (event) => {
 
       event.preventDefault();
       const { email, name, message} = this.state
-      const form = await LocalApi.post('/api/form', {
+      const form = await LocalApi.post('/form', {
         email,
         name,
         message
       })
 
-      alert('Message Submitted!  ');
+      this.setState({
+        email: '',
+        name: '',
+        message: ''
+      }) //set input fields to blank strings
+
+      alert('Message Submitted!'); 
     }
+
 
     render() {
       const { email, name, message} = this.state //destructured values
@@ -75,7 +86,8 @@ export default class ContactForm extends React.Component {
             />
            </label>
            <br />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" /><br />
+          <input type="button" value="Show Messages" onClick={this.handleShow} />
         </form>
         </div>
       );
