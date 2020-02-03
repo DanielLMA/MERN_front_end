@@ -3,7 +3,7 @@ import axios from "axios";
 import store from "./../store";
 
 const LocalApi = axios.create({
-    baseURL: "http://localhost:3000"
+    baseURL: "http://localhost:5000"
 });
 
 LocalApi.interceptors.request.use(function(config) {

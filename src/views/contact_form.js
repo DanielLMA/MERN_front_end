@@ -1,5 +1,6 @@
 import React from "react"
-import axios from "axios"
+// import axios from "axios"
+import LocalApi from '../apis/local'
 
 export default class ContactForm extends React.Component {
     constructor(props) {
@@ -30,17 +31,17 @@ export default class ContactForm extends React.Component {
 
     //refactor this to make it more DRY
 
-    async handleSubmit(event) {
+    handleSubmit = async (event) => {
 
+      event.preventDefault();
       const { email, name, message} = this.state
-      const form = await axios.post('/api/form', {
+      const form = await LocalApi.post('/api/form', {
         email,
         name,
         message
       })
 
       alert('Message Submitted!  ');
-      event.preventDefault();
     }
 
     render() {
