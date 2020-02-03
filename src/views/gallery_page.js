@@ -38,13 +38,16 @@ export default class GalleryPage extends React.Component {
 //     'Authorization': 'Basic ' + base64.encode("591787363579589" + ":" + "t0Lt5nA7LvI_3PUf6I0FibVqPl4"),
 //   },
 // }).then(res => res.json())
+    //     axios.get("https://591787363579589:t0Lt5nA7LvI_3PUf6I0FibVqPl4@api.cloudinary.com/v1_1/dadewebdev/resources/image")
+    //     .then(res => {
+    //         console.log(res.data) }
     }
 
     uploadWidget() {
         window.cloudinary.openUploadWidget({
             cloudName: 'dadewebdev',
             uploadPreset: 'wq6lajqj',
-            tags: ['raw_barbershop']
+            tags: ['raw_barbershop'],
         }, (error, result) => {
             //console.log(result);
             if (error) console.log(error)
@@ -84,3 +87,24 @@ export default class GalleryPage extends React.Component {
         )
     }
 }
+
+
+
+// buttons for crud
+// render() {  return (    
+// <div>      
+//     <form onSubmit={this.onSubmitHandle.bind(this)}>        
+//     <input type="string" name="imageName"  />        
+//     <button className="btn-add-item">Add</button>      
+//     </form>     
+//      <ul>        
+//      {this.state.gallery.map(item => (          
+//         <li key={item.id}>            
+//             {item.title}            
+//             <button onClick={this.onDeleteHandle.bind(this, item.id)}>Delete</button>            
+//             <button onClick={this.onEditHandle.bind(this, item.id, item.title)}>Edit</button>            
+//             <button onClick={this.onCompleteHandle}>Complete</button>          
+//         </li>        ))}     
+//       </ul>    
+// </div>  
+//       );}
