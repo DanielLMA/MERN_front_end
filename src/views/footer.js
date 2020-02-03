@@ -54,9 +54,6 @@ export default class FooterPage extends React.Component {
                         <li>
                             <Link className="link" to="/location">Location</Link>
                         </li>
-                        <li>
-                            <Link className="link" to="/dashboard">Dashboard</Link>
-                        </li>
                         { otherLinks }
                     </ul>
                 </div>

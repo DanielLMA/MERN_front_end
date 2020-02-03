@@ -16,28 +16,34 @@ export default class BarberPage extends React.Component {
                 <div id="central-content">
                     <div>
                             <img src={require("./images/taylor_avatar.jpg")} />
-                        <h3>Taylor</h3>
+                        <h3>Taylor Finlay</h3>
                         <h6>The Man, the Myth, and the Legend <br/>
-                            <strong>Taylor</strong> has been in the business
-                            of making people feel strong, empowered, maybe 
-                            even <strong>enlightened</strong>, by offerring his 
-                            services in the styling business for X years. 
-                            You will always feel good about yourself when
-                            you enter his shop and <u>helluh good </u>  
-                            when you strut out. 
+                            <strong>Taylor Finlay</strong> at 27 years old has barbering 
+                            in his blood. Landing an apprenticeship 
+                            with his father at his shop right out of high school, he
+                            became a <u>third generation barber</u> and the legacy of his family
+                            business fuels his drive and passion. <i>Ten</i> solid years in the biz,
+                             he has gained a wealth of experience cutting in many well 
+                            renowned shops throughout SE Queensland. <strong>Taylor</strong> appreciates 
+                            each individual that takes a seat in his chair, ranging from toddlers to 
+                            retirees. He strives to make make each person
+                            feel empowered with their new cut when they walk out his door. 
                         </h6>
                     </div>
                     <div>
-                        <img src={require("./images/anonymous_barber.jpg")} />
-                        <h3>Barber #2</h3>
+                        <img src={require("./images/jordan_hoare_avatar.jpg")} />
+                        <h3>Jordan</h3>
                         <h6>Style, Creativity,and Pose  <br/>
-                            Take a look in the mirror. <strong>Barber #2 </strong> 
-                            will help you define your distinct style. <strong>
-                            Barber #2</strong> has been at it for X years helping
-                            men reach their peak and find their style. 
-                            You'll <u>never miss a beat</u>. Look good for that 
-                            presentation, wedding, date. Life's too short for
-                            a bad haircut. 
+                            <strong>Jordan</strong> comes from humble beginnings, first cutting hair 
+                            in the backyard alongside high school friends after the bell rang.
+                            He followed up his interest in cutting/styling hair and 
+                            started an apprenticeship in 2017 at a male grooming franchise.  
+                            <strong> Jordan </strong> is skilled at an entire range of services but favours working 
+                            with medium length hair to craft classic styles like the executive 
+                            contour or pompadour. He enjoys taking his time with each client 
+                            so if you find yourself in his chair you are likely to hear about 
+                            it from Taylor, but rest assured, you'll be leaving 
+                            with a <u>top-line, quality haircut</u>.  
                         </h6>
                     </div>
                 </div>
