@@ -9,6 +9,7 @@ export default class GalleryPage extends React.Component {
         super()
         this.state = {
             gallery: []
+            //will run into problem later of gallery not undefined. need to below do gallery && in the CloudinaryContext? 
         }
     }
     componentDidMount() {
@@ -16,16 +17,16 @@ export default class GalleryPage extends React.Component {
             headers: {'Access-Control-Allow-Origin': '*'}
         }
         axios({
-            url: 'https://res.cloudinary.com/dadewebdev/image/list/raw_barbershop.json',
+            url: 'http://localhost:5000/images',
             method: 'GET',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, DELETE',
-                'Access-Control-Allow-Headers': 'Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type',
-                'Accept': 'application/x-www-form-urlencoded',
-                'Content-Type':'application/x-www-form-urlencoded'
-            }
-        }).then(res => { console.log(res.data)
+            // headers: {
+                // 'Access-Control-Allow-Origin': '*',
+                // 'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, DELETE',
+                // 'Access-Control-Allow-Headers': 'Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type',
+                // 'Accept': 'application/x-www-form-urlencoded',
+                // 'Content-Type':'application/x-www-form-urlencoded'
+            // }.
+        }).then(res => {
             this.setState({ gallery: res.data})
         })
             
@@ -51,15 +52,20 @@ export default class GalleryPage extends React.Component {
     }
     
     render() {
+
         return (
             <>
             {/* <Header2/> */}
-            
             <CloudinaryContext cloudName="dadewebdev">
-                    <Image>
-                        <Transformation width="200" crop="scale" angle="10"/>
-                    </Image>
+            {this.state.gallery.map(photo => (
+                <Image publicId={photo.slug} />
+                        
+
+            ))}
             </CloudinaryContext>      
+            
+                        {/* <Transformation width="200" crop="scale" angle="10"/> */}
+                    {/* </Image> */}
             {/* <Image cloudName="dadewebdev" publicId="dfpeAG4E86f3GX33Nm3yEBFN" width="200" crop="scale"/> */}
                 <div className="about-container" 
                 style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
