@@ -8,17 +8,12 @@ export default class ContactPage extends React.Component {
     render() {
         return (
             <>
-            {/* <body> */}
-
             <div className="content" >            
             <Header2/>                
             <h1>Contact Us</h1> 
                 <ContactForm/>
             </div>
-       
-
             <FooterPage/>
-            {/* </body> */}
             </>
         )
     }
