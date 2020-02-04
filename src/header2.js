@@ -7,9 +7,9 @@ import LoggedOutRoutes from './auth/LoggedOutRoutes'
 
 
 export default class Header2 extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
 
     // redirectToHome = () => {
     //     const { history } = this.props;
@@ -29,14 +29,14 @@ export default class Header2 extends React.Component {
     //   }
 
     //Function to delete the token from localStorage. 
-      handleLogout() {
-        sessionStorage.removeItem('token')
-        // this.redirectToHome()
-        // return <Redirect to='/login' />
-        // Redirect user after logout
+    //   handleLogout() {
+    //     sessionStorage.removeItem('token')
+    //     this.redirectToHome()
+    //     return <Redirect to='/login' />
+    //     Redirect user after logout
     //    this.props.history.push('/login')
-        //console.log(props)
-    }
+    //     console.log(props)
+    // }
 
     isLoggedIn() {
       const token = sessionStorage.getItem('token');
@@ -81,9 +81,6 @@ export default class Header2 extends React.Component {
                                     </li>
                                     <li>
                                         <Link to="/gallery">Gallery</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/seminars-training">Seminars - Training</Link>
                                     </li>
                                     <li>
                                         <Link to="/contact">Contact</Link>

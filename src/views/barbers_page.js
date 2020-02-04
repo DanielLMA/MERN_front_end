@@ -7,15 +7,14 @@ export default class BarberPage extends React.Component {
     render() {
         return (
             <>
-            
-            {/* <Header /> */}
+            <Header />
             <div className="barber-container">
                 <div id="top">
                     {/* Could put the logo here, or that will be on header if revamp  */}
                 </div>
                 <div id="central-content">
                     <div>
-                            <img src={require("./images/taylor_avatar.jpg")} />
+                            <img src={require("./images/taylor_avatar.jpg")} alt="taylor-bio-pic" />
                         <h3>Taylor Finlay</h3>
                         <h6>The Man, the Myth, and the Legend <br/>
                             <strong>Taylor Finlay</strong> at 27 years old has barbering 
@@ -31,7 +30,7 @@ export default class BarberPage extends React.Component {
                         </h6>
                     </div>
                     <div>
-                        <img src={require("./images/jordan_hoare_avatar.jpg")} />
+                        <img src={require("./images/jordan_hoare_avatar.jpg")} alt="jordan-bio-pic" />
                         <h3>Jordan</h3>
                         <h6>Style, Creativity,and Pose  <br/>
                             <strong>Jordan</strong> comes from humble beginnings, first cutting hair 
