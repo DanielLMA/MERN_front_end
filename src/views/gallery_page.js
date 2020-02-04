@@ -3,6 +3,8 @@ import React from "react"
 import {Image, CloudinaryContext} from 'cloudinary-react'
 import axios from "axios"
 // import base64 from "base-64"
+import FooterPage from "./footer.js"
+
 
 export default class GalleryPage extends React.Component {
     constructor() {
@@ -13,66 +15,119 @@ export default class GalleryPage extends React.Component {
         }
     }
     componentDidMount() {
+        // axios.get('https://res.cloudinary.com/dadewebdev/image/fetch/raw_barbershop.json')
+        //     .then(res => console.log(res))
+        //     .catch(err => console.log(err))
+    }
+
+    componentWillMount() { 
+        const config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        }
         axios({
-            url: 'http://localhost:5000/images',
+            url: 'http://localhost:5000/uploadingToGallery/getImages',
+
             method: 'GET',
         }).then(res => {
             this.setState({ gallery: res.data})
-        })
-            
-            .catch(console.log)
-
-//         fetch('https://res.cloudinary.com/dadewebdev/image/list/raw_barbershop.json', {
-//   method: 'get',
-//   headers: {
-//     'Authorization': 'Basic ' + base64.encode("591787363579589" + ":" + "t0Lt5nA7LvI_3PUf6I0FibVqPl4"),
-//   },
-// }).then(res => res.json())
-    //     axios.get("https://591787363579589:t0Lt5nA7LvI_3PUf6I0FibVqPl4@api.cloudinary.com/v1_1/dadewebdev/resources/image")
-    //     .then(res => {
-    //         console.log(res.data) }
+        }).catch(console.log)
     }
 
     uploadWidget() {
         window.cloudinary.openUploadWidget({
             cloudName: 'dadewebdev',
             uploadPreset: 'wq6lajqj',
-            tags: ['raw_barbershop'],
+            tags: ['raw_barbershop']
         }, (error, result) => {
-            //console.log(result);
+            if(result&&result.event=='success'){
+                this.postImages({
+                    imageName: result.info.original_filename,
+                    imageData: result.info.secure_url,
+                    imagePath: result.info.path,
+                    slug: result.info.path
+                })
+            }
             if (error) console.log(error)
         });
     }
     
+    postImages(result){
+        const config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        }
+        axios({
+            url: 'http://localhost:5000/uploadingToGallery/postImage',
+            method: 'POST',
+            data: result
+        }).then(res => {
+            console.log(res);
+        }).catch(console.log);
+    }
+
+    updateImages(result,id){
+        const config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        }
+        axios({
+            url: 'http://localhost:5000/uploadingToGallery/updateImage/${id}',
+            method: 'PUT',
+            data: result
+        }).then(res => {
+            console.log(res);
+        }).catch(console.log);
+    }
+
+    deleteImage(){
+        // console.log(cloudinary);
+        // axios({
+        //     url:'https://res.cloudinary.com/dadewebdev/image/upload/v1580715877/xt1yswwcdgzi6zeu4xxu.jpg',
+        //     method: 'REMOVE'}).then(res => {
+        //     console.log(res);
+        // }).catch(console.log);
+        axios.delete('http://res.cloudinary.com/dadewebdev/image/upload/v1580715877/xt1yswwcdgzi6zeu4xxu',{
+            headers: {'Access-Control-Allow-Origin': '*'}
+        }).then(res => {
+            console.log(res);
+        }).catch(err => console.log(err));
+        // axios({
+        //     url: 'http://res.cloudinary.com/dadewebdev/image/upload/v1580730889/yux0avbq37qrq2rth8xh.jpg',
+        //     method: 'DELETE',
+        // }).then(res => {
+        //     console.log(res);
+        // }).catch(console.log);
+
+
+        // axios({
+        //     url: 'http://localhost:5000/uploadingToGallery/deleteImage/${id}',
+        //     method: 'DELETE',
+        // }).then(res => {
+        //     console.log(res);
+        // }).catch(console.log);
+    }
+
     render() {
 
         return (
             <>
             {/* <Header2/> */}
-   
-            
-                    {/* </Image> */}
-            {/* <Image cloudName="dadewebdev" publicId="dfpeAG4E86f3GX33Nm3yEBFN" width="200" crop="scale"/> */}
                 <div className="about-container" 
-                style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
+                // style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
                 >
                     <div className="content">
-                    <h1>Gallery</h1>
-                    <button
-                        onClick={this.uploadWidget.bind(this)}
-                    >Upload Image</button>
-                    <p>Gallery</p> 
-                    <CloudinaryContext cloudName="dadewebdev">
-            {this.state.gallery.map(photo => (
+                    <h1>Photo Gallery</h1>
+                    <button onClick={this.uploadWidget.bind(this)}>
+                        Upload Image
+                    </button>
+            <CloudinaryContext cloudName="dadewebdev">
+                {this.state.gallery.map(photo => (
                 <Image publicId={photo.slug} width="200" crop="scale" />
                 // <Transformation width="200" crop="scale" angle="10"/>
-                        
-
             ))}
             </CloudinaryContext>   
-                    </div>
+                </div>
 
                 </div>
+                <FooterPage/>
             </> 
         )
     }
