@@ -88,6 +88,7 @@ export default class ContactForm extends React.Component {
             </label>
             <input 
               className="input"
+              placeholder="E-mail"
               type="text" 
               value={email} 
               onChange={this.handleEmail}
@@ -99,6 +100,7 @@ export default class ContactForm extends React.Component {
               Name:
             </label>
             <input 
+              placeholder="Name"
               className="input"
               type="text" 
               value={name}
@@ -111,6 +113,7 @@ export default class ContactForm extends React.Component {
               Message:
             </label>
             <input 
+              placeholder="Message"
               className="input"
               value={message} 
               onChange={this.handleMessage}

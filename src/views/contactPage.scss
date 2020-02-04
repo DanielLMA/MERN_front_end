@@ -1,5 +1,7 @@
 body {
     height: 90vh;
+    background: url('../views/images/haircut_pic.jpg') no-repeat top center;
+    background-size: cover;
 }
 
 .contact-content {
@@ -27,7 +29,7 @@ body {
     line-height: 5vh;
     font-family: sans-serif;
     font-size: 16px;
-    border: 2px solid rgb(201, 201, 201);   
+    background: rgba(255, 255, 255, 0.6);   
     border-radius: 10px;
     padding: 20%;
     // position: relative;
