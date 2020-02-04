@@ -2,16 +2,21 @@ import React from "react"
 // import axios from "axios"
 import LocalApi from '../apis/local'
 
+//Return to this component to refactor
+
 export default class ContactForm extends React.Component {
     constructor(props) {
       super(props)
 
       this.state = {
-        name: '',
-        email: '',
+        name: 'Contact page',
+        email: 'rawbarbershop2020@gmail.com',
         message: ''
       }
+      // this.handleChange = this.handleChange.bind(this);
+	    this.handleSubmit = this.handleSubmit.bind(this);
     }
+ 
 
     handleEmail = event => {
       this.setState({
@@ -31,36 +36,51 @@ export default class ContactForm extends React.Component {
 
     //refactor this to make it more DRY
 
-    handleShow = async (event) => {
-      const form = await LocalApi.get('/form')
-    }
+    // handleShow = async (event) => {
+    //   const form = await LocalApi.get('/form')
+    // }
 
-    handleSubmit = async (event) => {
+    handleSubmit (event) {
 
-      event.preventDefault();
-      const { email, name, message} = this.state
-      const form = await LocalApi.post('/form', {
-        email,
-        name,
-        message
-      })
+      // event.preventDefault();
+      // const { email, name, message} = this.state
+      // const form = await LocalApi.post('/form', {
+      //   email,
+      //   name,
+      //   message
+      // })
+      const templateId = "template_Id"
+      this.sendFeedback(templateId, {message_html: this.state.message, from_name: this.state.name, reply_to: this.state.email})
+
 
       this.setState({
         email: '',
         name: '',
         message: ''
+        
       }) //set input fields to blank strings
 
-      alert('Message Submitted!'); 
+    }
+
+    sendFeedback (templateId, variables) {
+      window.emailjs.send(
+        'gmail', templateId,
+        variables
+        ).then(res => {
+          console.log('Email successfully sent!')
+        })
+        .catch(err => console.error('Sending failed:', err))    
     }
 
 
     render() {
       const { email, name, message} = this.state //destructured values
       return (
+        
           <div className="contactForm">
-        <form onSubmit={this.handleSubmit}>
-          <label>
+            
+        <form>
+          {/* <label>
             Email:
             <input 
             type="text" 
@@ -76,7 +96,7 @@ export default class ContactForm extends React.Component {
             value={name}
             onChange={this.handleName} 
             />
-          </label>
+          </label> */}
           <br />
           <label>
             Message:
@@ -86,8 +106,8 @@ export default class ContactForm extends React.Component {
             />
            </label>
            <br />
-          <input type="submit" value="Submit" /><br />
-          <input type="button" value="Show Messages" onClick={this.handleShow} />
+          <input type="submit" value="Submit" onClick={this.handleSubmit} /><br />
+          {/* <input type="button" value="Show Messages" onClick={this.handleShow} /> */}
         </form>
         </div>
       );
