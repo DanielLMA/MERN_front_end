@@ -1,6 +1,7 @@
 import React from "react"
+import "./contactPage.scss"
 // import axios from "axios"
-import LocalApi from '../apis/local'
+// import LocalApi from '../apis/local'
 
 //Return to this component to refactor
 
@@ -9,8 +10,8 @@ export default class ContactForm extends React.Component {
       super(props)
 
       this.state = {
-        name: 'Contact page',
-        email: 'rawbarbershop2020@gmail.com',
+        name: '',
+        email: '',
         message: ''
       }
       // this.handleChange = this.handleChange.bind(this);
@@ -74,39 +75,49 @@ export default class ContactForm extends React.Component {
 
 
     render() {
-      const { email, name, message} = this.state //destructured values
+      const { message, email, name} = this.state //destructured values,
       return (
         
           <div className="contactForm">
             
         <form action="MAILTO:rawbarbershop2020@gmail.com" method="post" encType="text/plain">
-          {/* <label>
-            Email:
+          <div className="title"><h1>Contact</h1></div>
+          <div className="item">
+            <label className="label">
+              Email:
+            </label>
             <input 
-            type="text" 
-            value={email} 
-            onChange={this.handleEmail}
-            />
-          </label>
-          <br />
-          <label>
-            Name:
+              className="input"
+              type="text" 
+              value={email} 
+              onChange={this.handleEmail}
+              />
+          </div>
+
+          <div className="item">
+            <label className="label" >
+              Name:
+            </label>
             <input 
-            type="text" 
-            value={name}
-            onChange={this.handleName} 
-            />
-          </label> */}
-          <br />
-          <label>
-            Message:
-            <textarea 
-            value={message} 
-            onChange={this.handleMessage}
-            />
-           </label>
-           <br />
-          <input type="submit" value="Send" /><br />
+              className="input"
+              type="text" 
+              value={name}
+              onChange={this.handleName} 
+              />
+          </div>
+
+          <div className="item">
+            <label className="label">
+              Message:
+            </label>
+            <input 
+              className="input"
+              value={message} 
+              onChange={this.handleMessage}
+              />
+           </div>
+
+          <input type="submit" value="Send" className="button" />
           {/* <input type="button" value="Show Messages" onClick={this.handleShow} /> */}
         </form>
         </div>
