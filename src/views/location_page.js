@@ -1,5 +1,7 @@
 import React from "react"
 import Header2 from "./../header2"
+import FooterPage from "./footer.js"
+
 
 export default class LocationPage extends React.Component {
     render() {
@@ -40,6 +42,8 @@ export default class LocationPage extends React.Component {
                 </div>
             </div>
             </div>
+            <FooterPage />
+
             </>
         )
     }
