@@ -79,7 +79,7 @@ export default class ContactForm extends React.Component {
         
           <div className="contactForm">
             
-        <form>
+        <form action="MAILTO:rawbarbershop2020@gmail.com" method="post" encType="text/plain">
           {/* <label>
             Email:
             <input 
@@ -106,7 +106,7 @@ export default class ContactForm extends React.Component {
             />
            </label>
            <br />
-          <input type="submit" value="Submit" onClick={this.handleSubmit} /><br />
+          <input type="submit" value="Send" /><br />
           {/* <input type="button" value="Show Messages" onClick={this.handleShow} /> */}
         </form>
         </div>
