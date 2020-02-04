@@ -3,6 +3,8 @@ import React from "react"
 import {Image, CloudinaryContext} from 'cloudinary-react'
 import axios from "axios"
 // import base64 from "base-64"
+import FooterPage from "./footer.js"
+
 
 export default class GalleryPage extends React.Component {
     constructor() {
@@ -42,6 +44,7 @@ export default class GalleryPage extends React.Component {
                     imageName: result.info.original_filename,
                     imageData: result.info.secure_url,
                     imagePath: result.info.path,
+                    slug: result.info.path
                 })
             }
             if (error) console.log(error)
@@ -107,35 +110,24 @@ export default class GalleryPage extends React.Component {
         return (
             <>
             {/* <Header2/> */}
-   
-            
-                    {/* </Image> */}
-            {/* <Image cloudName="dadewebdev" publicId="dfpeAG4E86f3GX33Nm3yEBFN" width="200" crop="scale"/> */}
                 <div className="about-container" 
-                style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
+                // style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
                 >
                     <div className="content">
-                    <h1>Gallery</h1>
-                    <button
-                        onClick={this.uploadWidget.bind(this)}
-                    >Upload Image</button>
-                    <p>Gallery</p> 
-                    <CloudinaryContext cloudName="dadewebdev">
-            {this.state.gallery.map(photo => (
+                    <h1>Photo Gallery</h1>
+                    <button onClick={this.uploadWidget.bind(this)}>
+                        Upload Image
+                    </button>
+            <CloudinaryContext cloudName="dadewebdev">
+                {this.state.gallery.map(photo => (
                 <Image publicId={photo.slug} width="200" crop="scale" />
                 // <Transformation width="200" crop="scale" angle="10"/>
-                    
-
             ))}
             </CloudinaryContext>   
-
-                <div>
-                    
+                </div>
 
                 </div>
-                    </div>
-
-                </div>
+                <FooterPage/>
             </> 
         )
     }
