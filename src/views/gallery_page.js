@@ -37,7 +37,7 @@ export default class GalleryPage extends React.Component {
 
     uploadWidget() {
         window.cloudinary.openUploadWidget({
-            cloudName: 'dadewebdev',
+            cloudName: process.env.CLOUD_NAME,
             uploadPreset: 'wq6lajqj',
             tags: ['raw_barbershop']
         }, (error, result) => {
@@ -79,33 +79,17 @@ export default class GalleryPage extends React.Component {
         }).catch(console.log);
     }
 
-    deleteImage(){
-        // console.log(cloudinary);
-        // axios({
-        //     url:'https://res.cloudinary.com/dadewebdev/image/upload/v1580715877/xt1yswwcdgzi6zeu4xxu.jpg',
-        //     method: 'REMOVE'}).then(res => {
-        //     console.log(res);
-        // }).catch(console.log);
-        axios.delete('http://res.cloudinary.com/dadewebdev/image/upload/v1580715877/xt1yswwcdgzi6zeu4xxu',{
-            headers: {'Access-Control-Allow-Origin': '*'}
-        }).then(res => {
-            console.log(res);
-        }).catch(err => console.log(err));
-        // axios({
-        //     url: 'http://res.cloudinary.com/dadewebdev/image/upload/v1580730889/yux0avbq37qrq2rth8xh.jpg',
-        //     method: 'DELETE',
-        // }).then(res => {
-        //     console.log(res);
-        // }).catch(console.log);
-
-
-        // axios({
-        //     url: 'http://localhost:5000/uploadingToGallery/deleteImage/${id}',
-        //     method: 'DELETE',
-        // }).then(res => {
-        //     console.log(res);
-        // }).catch(console.log);
-    }
+    deleteImage(publicId, id){
+                    axios({
+                        url: 'http://localhost:5000/uploadingToGallery/deleteImage/'+id,
+                        method: 'DELETE',
+                    }).then(res => {
+                        console.log(res);
+                    }).catch(console.log);
+                }
+            }
+        );
+    }	    
 
     render() {
 
