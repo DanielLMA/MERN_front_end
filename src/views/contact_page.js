@@ -10,10 +10,14 @@ export default class ContactPage extends React.Component {
             <>
             <div className="content" >            
             <Header2/>                
+
+            <div className="contact-content" >            
             <h1>Contact Us</h1> 
                 <ContactForm/>
+
             </div>
             <FooterPage/>
+            </div>
             </>
         )
     }
