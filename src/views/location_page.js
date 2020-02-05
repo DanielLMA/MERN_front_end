@@ -1,6 +1,7 @@
 import React from "react"
 import Header2 from "./../header2"
 import FooterPage from "./footer.js"
+import '../style.scss';
 
 
 export default class LocationPage extends React.Component {
@@ -13,7 +14,7 @@ export default class LocationPage extends React.Component {
                 >
 
 
-            <div class="content-location">
+            <div className="content-location">
                 <h1>Location</h1> <br />
 
                 <img src={require('./images/maps.png')} alt="google maps"></img>

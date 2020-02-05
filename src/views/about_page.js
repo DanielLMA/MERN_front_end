@@ -1,6 +1,7 @@
 import React from "react"
 import Header2 from "./../header2.js"
 import FooterPage from "./footer.js"
+import '../style.scss';
 
 export default class AboutPage extends React.Component {
     render() {

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom";
 import Header from "./../header2.js"
 import Axios from "axios";
+import '../style.scss';
 
 export default class HomePage extends React.Component {
 
