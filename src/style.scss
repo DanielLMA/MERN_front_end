@@ -92,10 +92,12 @@ body {
     .content{
         justify-self: center;
         background-color: rgba(255, 255, 255, 0.527);
+        border-radius: 10px;
         max-width: 80vw;
         padding: 2rem;
         position: relative;
         z-index: 1;
+        line-height: 1.5;
         h1 {
             font-size: 4.3rem;
             margin-bottom: 0.8rem;
