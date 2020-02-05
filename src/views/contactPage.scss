@@ -9,7 +9,7 @@
     justify-content: center;
     justify-items: center;
     position: absolute;
-    top: 25%;
+    top: 15%;
     width: 100vw;
     // grid-template-rows: 10% 1fr;
     // grid-template-areas: 
@@ -26,6 +26,7 @@
 
 .contactForm {
     grid-area: form;
+    // width: 30vw;
     line-height: 5vh;
     font-family: sans-serif;
     font-size: 16px;
@@ -33,7 +34,7 @@
     border-radius: 10px;
     padding: 20%;
     // position: relative;
-    // z-index: 10; //was previously sitting behind the header 
+    // z-index: 5; //was previously sitting behind the header 
     
 }
 

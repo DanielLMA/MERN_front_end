@@ -1,7 +1,7 @@
 import React from "react"
 import Header2 from "./../header2"
 import FooterPage from "./footer.js"
-import '../style.scss';
+import "./locationPage.scss"
 
 
 export default class LocationPage extends React.Component {

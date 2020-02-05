@@ -16,7 +16,8 @@ export default class BarberPage extends React.Component {
                     <div>
                             <img src={require("./images/taylor_avatar.jpg")} alt="taylor-bio-pic" />
                         <h3>Taylor Finlay</h3>
-                        <h6>The Man, the Myth, and the Legend <br/>
+                        <h6>The Man, the Myth, and the Legend </h6>
+                        <p>
                             <strong>Taylor Finlay</strong> at 27 years old has barbering 
                             in his blood. Landing an apprenticeship 
                             with his father at his shop right out of high school, he
@@ -27,12 +28,13 @@ export default class BarberPage extends React.Component {
                             each individual that takes a seat in his chair, ranging from toddlers to 
                             retirees. He strives to make make each person
                             feel empowered with their new cut when they walk out his door. 
-                        </h6>
+                        </p>
                     </div>
                     <div>
                         <img src={require("./images/jordan_hoare_avatar.jpg")} alt="jordan-bio-pic" />
                         <h3>Jordan</h3>
-                        <h6>Style, Creativity,and Pose  <br/>
+                        <h6>Style, Creativity,and Pose </h6>
+                        <p>
                             <strong>Jordan</strong> comes from humble beginnings, first cutting hair 
                             in the backyard alongside high school friends after the bell rang.
                             He followed up his interest in cutting/styling hair and 
@@ -43,7 +45,7 @@ export default class BarberPage extends React.Component {
                             so if you find yourself in his chair you are likely to hear about 
                             it from Taylor, but rest assured, you'll be leaving 
                             with a <u>top-line, quality haircut</u>.  
-                        </h6>
+                        </p>
                     </div>
                 </div>
                 <FooterPage />
