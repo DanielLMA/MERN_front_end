@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom";
 import Header from "./../header2.js"
 import Axios from "axios";
+import '../style.scss';
 
 export default class HomePage extends React.Component {
 
@@ -19,7 +20,6 @@ export default class HomePage extends React.Component {
     render() {
         return (
             <>
-        
                 <Header/>
                 <div className="container">
                     <div className="content">
@@ -27,7 +27,6 @@ export default class HomePage extends React.Component {
                         <Link to="/appointments" className="btn">Book Appointment</Link>
                     </div>
                 </div>
-           
             </>
         )
     }

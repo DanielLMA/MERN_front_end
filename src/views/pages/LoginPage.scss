@@ -1,5 +1,5 @@
 
-.devise-body {
+.login-body {
     h1 {
         font-size: 2.25rem;
         color: black;
@@ -75,10 +75,10 @@
       }
     }
     #login-right {
-      background-image: url(image_path("runner_looking.jpg"));
+      background-image: url("../images/haircut_pic.jpg");
       background-size: cover;
       background-image: center center;
-      background-color: rgba(203, 190, 14, 0.253);
+      background-color: rgb(0, 0, 0);
       background-blend-mode: luminosity;
     }
   }
@@ -92,7 +92,7 @@
           background-color: rgba(203, 190, 14, 0.801);
           padding: 5px;
       }
-    background-image: url(image_path("runner_looking.jpg"));
+    // background-image: url(image_path("runner_looking.jpg"));
     background-size: cover;
     background-image: center center;
     background-color: rgba(203, 190, 14, 0.267);
@@ -115,7 +115,7 @@
 @media only screen and (max-width: 650px) {
   .devise-body {
  
-    background-image: url(image_path("running_login_mobile.jpg"));
+    // background-image: url(image_path("running_login_mobile.jpg"));
     background-size: cover;
     background-repeat: repeat-y;
     background-image: center center;
