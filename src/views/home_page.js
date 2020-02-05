@@ -19,7 +19,6 @@ export default class HomePage extends React.Component {
     render() {
         return (
             <>
-        
                 <Header/>
                 <div className="container">
                     <div className="content">
@@ -27,7 +26,6 @@ export default class HomePage extends React.Component {
                         <Link to="/appointments" className="btn">Book Appointment</Link>
                     </div>
                 </div>
-           
             </>
         )
     }

@@ -4,6 +4,8 @@ import {Image, CloudinaryContext} from 'cloudinary-react'
 import axios from "axios"
 // import base64 from "base-64"
 import FooterPage from "./footer.js"
+import Header from "../header.js"
+import "./gallery.scss"
 
 
 export default class GalleryPage extends React.Component {
@@ -110,10 +112,12 @@ export default class GalleryPage extends React.Component {
         return (
             <>
             {/* <Header2/> */}
-                <div className="about-container" 
+            <Header/>
+            <div className="gallery-container" 
                 // style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
                 >
-                    <div className="content">
+              
+                    <div className="gallery-content">
                     <h1>Photo Gallery</h1>
                     <button onClick={this.uploadWidget.bind(this)}>
                         Upload Image
