@@ -78,7 +78,7 @@ export default class ContactForm extends React.Component {
       const { message, email, name} = this.state //destructured values,
       return (
         
-          <div className="contactForm">
+      <div className="contactForm">
             
         <form action="MAILTO:rawbarbershop2020@gmail.com" method="post" encType="text/plain">
           <div className="title"><h1>Contact</h1></div>
@@ -123,7 +123,7 @@ export default class ContactForm extends React.Component {
           <input type="submit" value="Send" className="button" />
           {/* <input type="button" value="Show Messages" onClick={this.handleShow} /> */}
         </form>
-        </div>
+      </div>
       );
     }
   } 

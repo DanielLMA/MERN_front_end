@@ -3,6 +3,7 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { setAuthToken } from "../../../actions";
 import { connect } from "react-redux"
+import "../../../views/contactPage.scss"
 
 class RegisterForm extends Component {
   state = {
@@ -50,27 +51,31 @@ class RegisterForm extends Component {
     const { email, password } = this.state;
 
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <p>
-          <label htmlFor="email">Email</label>
+      <div className="">
+      <form onSubmit={this.onFormSubmit} >
+        <p className="item">
+          <label htmlFor="email" className="label">Email</label>
           <input
+          className="input"
             type="email"
             value={email}
             onChange={event => this.onInputChange("email", event)}
           />
         </p>
-        <p>
-          <label htmlFor="email">Password</label>
+        <p className="item">
+          <label htmlFor="email" className="label">Password</label>
           <input
+            className="input"
             type="password"
             value={password}
             onChange={event => this.onInputChange("password", event)}
           />
         </p>
-        <p>
-          <input type="submit" value="Register New User" />
+        <p className="item">
+          <input type="submit" value="Register New User" className="button" />
         </p>
       </form>
+      </div>
     );
   }
 }
