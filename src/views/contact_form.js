@@ -112,9 +112,9 @@ export default class ContactForm extends React.Component {
             <label className="label">
               Message:
             </label>
-            <input 
+            <textarea 
               placeholder="Message"
-              className="input"
+              className="inputMessage"
               value={message} 
               onChange={this.handleMessage}
               />

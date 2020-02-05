@@ -75,6 +75,21 @@ body {
     transition: background 0.25s, border-color 0.25s, color 0.25s;
 }
 
+.inputMessage {
+    -webkit-appearance: none;
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    padding: 0.8em;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: #f9f9f9da;
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
 .input:focus {
     background: #FFFFFF;
 }
