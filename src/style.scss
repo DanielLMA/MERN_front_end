@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
      font-family: Work Sans,sans-serif;
+     
 }
 
 body {
@@ -90,6 +91,67 @@ body {
     }
 
     .content{
+        @keyframes fadeIn
+         to { 
+        opacity: 1; }
+
+        .fade-in {
+            animation: fadeIn 1.0s ease forwards;
+        }
+
+        @keyframes fadeIn{
+            0% {
+              opacity:0;
+            }
+            100% {
+              opacity:1;
+            }
+          }
+          
+          @-moz-keyframes fadeIn {
+            0% {
+              opacity:0;
+            }
+            100% {
+              opacity:1;
+            }
+          }
+          
+          @-webkit-keyframes fadeIn {
+            0% {
+              opacity:0;
+            }
+            100% {
+              opacity:1;
+            }
+          }
+          
+          @-o-keyframes fadeIn {
+            0% {
+              opacity:0;
+            }
+            100% {
+              opacity:1;
+            }
+          }
+          
+          @-ms-keyframes fadeIn {
+            0% {
+              opacity:0;
+            }
+            100% {
+              opacity:1;
+            }
+          }
+
+          .fade-in {
+            animation: fadeIn ease 5s;
+            -webkit-animation: fadeIn ease 5s;
+            -moz-animation: fadeIn ease 5s;
+            -o-animation: fadeIn ease 5s;
+            -ms-animation: fadeIn ease 5s;
+          }
+
         justify-self: center;
         // background-color: rgba(255, 255, 255, 0.527);
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -103,6 +165,7 @@ body {
             font-size: 4.3rem;
             margin-bottom: 0.8rem;
             color: white;
+            
             // text-shadow: 2px 2px 2px #000000;
         }
         p {
@@ -159,6 +222,7 @@ body {
         text-transform: uppercase;
         display: inline-black;
         transition: 0.3s;
+        border-radius: 5px;
         &:hover {
             color: yellow;
             opacity: 0.7;
