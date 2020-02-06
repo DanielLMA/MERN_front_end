@@ -1,5 +1,5 @@
 import React from "react"
-require ("dotenv").config()
+// require ("dotenv").config()
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import jwt_decode from "jwt-decode";
