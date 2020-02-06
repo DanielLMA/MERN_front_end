@@ -119,7 +119,7 @@ export default class GalleryPage extends React.Component {
               
                     <div className="gallery-content">
                     <h1>Photo Gallery</h1>
-                    <button onClick={this.uploadWidget.bind(this)}>
+                    <button data-cy="submit" onClick={this.uploadWidget.bind(this)}>
                         Upload Image
                     </button>
             <CloudinaryContext cloudName="dadewebdev">

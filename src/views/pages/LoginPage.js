@@ -7,6 +7,7 @@ class LoginPage extends Component {
         
         return(
 
+
             <div className="contact-body">
                 <div className="contact-content">
                     <div className="formBackground">
