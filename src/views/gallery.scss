@@ -1,46 +1,48 @@
-// .gallery-container {
-//     position: relative;
-//     height: 100vh;
-//     width: 100vw;
-    
+.gallery-container {
+    min-height: 100vh;
+    width: 100vw;
+    line-height: 4vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+.gallery-content{
+    justify-self: center;
+    background-color: rgba(255, 255, 255, 0.767);
+    max-width: 80vw;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    h1 {
+        font-size: 4.3rem;
+        margin-bottom: 0.8rem;
+        color: black;
+        // text-shadow: 2px 2px 2px #000000;
+    }
+    p {
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 100;
+        // text-shadow: 2px 2px 2px #000000;
+    }
 
-//     // background-image: url("./haircut_pic.jpg") no-repeat;
-//     line-height: 4vh;
-//     background-size: cover; 
-//     background-position: 50% 30%;
-//     display: grid;
-//     grid-template-rows: 1fr;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     // &:before{
-//     //     content: '';
-//     //     position: absolute;
-//     //     top: 0;
-//     //     left: 0;
-//     //     width: 100%;
-//     //     height: 100%;
-//     // }
+    .cloud-grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
 
-
-// .gallery-content{
-//     justify-self: center;
-//     background-color: rgba(255, 255, 255, 0.527);
-//     max-width: 80vw;
-//     padding: 2rem;
-//     position: relative;
-//     z-index: 1;
-//     h1 {
-//         font-size: 4.3rem;
-//         margin-bottom: 0.8rem;
-//         color: black;
-//         // text-shadow: 2px 2px 2px #000000;
-//     }
-//     p {
-//         color: black;
-//         font-size: 1.2rem;
-//         font-weight: 100;
-//         // text-shadow: 2px 2px 2px #000000;
-//     }
-// }
-// }
+        .image {
+            max-height: 300px;
+            object-fit: scale-down;
+            
+            
+            &:hover {
+                border: 2px solid black;
+            }
+        }
+        
+    }
+}
+}
