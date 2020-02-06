@@ -20,7 +20,7 @@ class LoginPage extends Component {
                 <div id="login-left-left"></div>
                 <div id="login-left-center">
                     <h1>User Login</h1>
-             <LoginForm 
+             <LoginForm
                history={this.props.history}
              onLogin={this.props.onLogin} />
                
