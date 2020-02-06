@@ -1,13 +1,13 @@
 import React from "react"
 import Header2 from "./../header2.js"
 import FooterPage from "./footer.js"
-import '../style.scss';
+import './aboutPage.scss';
 
 export default class AboutPage extends React.Component {
     render() {
         return (
             <>
-          
+           
             <Header2 
             {...this.props}
             history={this.props.history}

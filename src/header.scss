@@ -39,12 +39,12 @@
         // padding-right: 5px;
       }
 
-    .login {
+    .login * {
     justify-content: right;
-    font-style: italic;      
+    // font-style: italic;      not sure about this one, keeping it basic to conform to navbar styling
     text-decoration: none;  
     color: white;
-    // text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgba(0, 0, 0, 0.7), -1px 1px 0 rgba(0, 0, 0, 0.7), 1px 1px 0 rgba(0, 0, 0, 0.7);
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgba(0, 0, 0, 0.7), -1px 1px 0 rgba(0, 0, 0, 0.7), 1px 1px 0 rgba(0, 0, 0, 0.7);
 
     }
     
