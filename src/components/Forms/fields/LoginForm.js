@@ -33,10 +33,10 @@ class LoginForm extends Component {
     const { email, password } = this.state;
 
     return (
-      <form onSubmit={this.onFormSubmit}>
+      <form data-cy="login-form" onSubmit={this.onFormSubmit}>
         <p className="item">
           <label htmlFor="email" className="label">Email</label>
-          <input
+          <input data-cy="email"
           className="input"
             type="email"
             value={email}
@@ -45,7 +45,7 @@ class LoginForm extends Component {
         </p>
         <p className="item">
           <label htmlFor="email" className="label">Password</label>
-          <input
+          <input data-cy="password"
           className="input"
             type="password"
             value={password}
@@ -53,7 +53,7 @@ class LoginForm extends Component {
           />
         </p>
         <p className="item">
-          <input type="submit" value="Login User" className="button"/>
+          <input data-cy="submit" type="submit" value="Login User" className="button"/>
         </p>
       </form>
     );

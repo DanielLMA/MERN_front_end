@@ -111,8 +111,6 @@ export default class GalleryPage extends React.Component {
 
         return (
             <>
-            {/* <Header2/> */}
-           
             <div className="gallery-container">
                     <div className="gallery-content">
                     <h1>Photo Gallery</h1>
@@ -127,34 +125,12 @@ export default class GalleryPage extends React.Component {
                     </CloudinaryContext>   
                     <button onClick={this.uploadWidget.bind(this)}>
                         <h2>Upload Image</h2>
+                       
                     </button>
-
                 </div>
-
                 </div>
                 <FooterPage/>
             </> 
         )
     }
 }
-
-
-
-// buttons for crud
-// render() {  return (    
-// <div>      
-//     <form onSubmit={this.onSubmitHandle.bind(this)}>        
-//     <input type="string" name="imageName"  />        
-//     <button className="btn-add-item">Add</button>      
-//     </form>     
-//      <ul>        
-//      {this.state.gallery.map(item => (          
-//         <li key={item.id}>            
-//             {item.title}            
-//             <button onClick={this.onDeleteHandle.bind(this, item.id)}>Delete</button>            
-//             <button onClick={this.onEditHandle.bind(this, item.id, item.title)}>Edit</button>            
-//             <button onClick={this.onCompleteHandle}>Complete</button>          
-//         </li>        ))}     
-//       </ul>    
-// </div>  
-//       );}

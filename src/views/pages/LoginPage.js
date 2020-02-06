@@ -7,66 +7,17 @@ class LoginPage extends Component {
         
         return(
 
-            <body class="login-body">
-            <section class="login-grid">
-            <div id="login-left">
-                <div id="login-left-top">
-                  <div id="login-left-top-welcome">
-                      <div id="welcome-welcome"><h1>Raw Barbershop</h1></div>
-                      <div id="welcome-img"></div>
-                      <div id="welcome-tagline"></div>
-                  </div>
-                </div>
-                <div id="login-left-left"></div>
-                <div id="login-left-center">
-                    <h1>User Login</h1>
-             <LoginForm 
-               history={this.props.history}
-             onLogin={this.props.onLogin} 
-             currentUser={this.props.currentUser}/>
-               
-                    <div class="field">
-                    
-                   
-                    </div>
-                  
-                    <div class="field">
-                    
-                    
-                    </div>
-                  
-                   
-                      <div class="box-field">
-                 
-                      </div>
-                   
-                  
-                    <div class="actions">
-                  
-                    </div>
 
-      
+            <div className="contact-body">
+                <div className="contact-content">
+                    <div className="formBackground">
+                        <h1>Login</h1>
+                        <LoginForm 
+                        history={this.props.history}
+                        onLogin={this.props.onLogin} />
+                    </div>
                 </div>
-                <div id="login-left-right"></div>
             </div>
-            <div id="login-right"></div>
-          
-            
-            </section>
-      
-      
-      
-      
-      
-      
-        </body>
-
-
-
-
-
-
-
 
             // <div className="login-body">
             //     <h1>User Login</h1>
