@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import RegisterForm from "../../components/Forms/fields/RegistrationForm";
 import "./RegisterPage_style.scss"
 import Header from "../../header2"
+import FooterPage from "../footer.js"
+
 
 class RegisterPage extends Component {
     render() {
@@ -19,7 +21,9 @@ class RegisterPage extends Component {
                         onRegister={this.props.onRegister}
                         currentUser={this.props.currentUser} />
                     </div>
+                    <FooterPage/>
                 </div>
+            
             </div>
         );
     }
