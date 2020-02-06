@@ -111,49 +111,26 @@ export default class GalleryPage extends React.Component {
 
         return (
             <>
-            {/* <Header2/> */}
-            <Header/>
-            <div className="gallery-container" 
-                // style={{backgroundImage: 'url(' + require('./images/haircut_pic.jpg') + ')'}}
-                >
-              
+            <div className="gallery-container">
                     <div className="gallery-content">
                     <h1>Photo Gallery</h1>
-                    <button data-cy="submit" onClick={this.uploadWidget.bind(this)}>
-                        Upload Image
+                    <br/>
+                    <CloudinaryContext cloudName="dadewebdev" className="cloud-grid">
+                    {this.state.gallery.map(photo => (
+                        <a href="https://www.instagram.com/raw.barbershop/" >
+                    <Image publicId={photo.slug} crop="scale" className="image" />
+                    </a>
+                    ))}
+                   
+                    </CloudinaryContext>   
+                    <button onClick={this.uploadWidget.bind(this)}>
+                        <h2>Upload Image</h2>
+                       
                     </button>
-            <CloudinaryContext cloudName="dadewebdev">
-                {this.state.gallery.map(photo => (
-                <Image publicId={photo.slug} width="200" crop="scale" />
-                // <Transformation width="200" crop="scale" angle="10"/>
-            ))}
-            </CloudinaryContext>   
                 </div>
-
                 </div>
                 <FooterPage/>
             </> 
         )
     }
 }
-
-
-
-// buttons for crud
-// render() {  return (    
-// <div>      
-//     <form onSubmit={this.onSubmitHandle.bind(this)}>        
-//     <input type="string" name="imageName"  />        
-//     <button className="btn-add-item">Add</button>      
-//     </form>     
-//      <ul>        
-//      {this.state.gallery.map(item => (          
-//         <li key={item.id}>            
-//             {item.title}            
-//             <button onClick={this.onDeleteHandle.bind(this, item.id)}>Delete</button>            
-//             <button onClick={this.onEditHandle.bind(this, item.id, item.title)}>Edit</button>            
-//             <button onClick={this.onCompleteHandle}>Complete</button>          
-//         </li>        ))}     
-//       </ul>    
-// </div>  
-//       );}
