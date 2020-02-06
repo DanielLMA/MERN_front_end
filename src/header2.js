@@ -58,42 +58,37 @@ export default class Header2 extends React.Component {
 
         const otherLinks = this.isLoggedIn() ? <LoggedInRoutes /> : <LoggedOutRoutes />
         return (
-            <>
-                <div className="menu-container">
-                    <input type="checkbox" className="toggler"/>
-                    <div className="hamburger" >
-                        <div></div>
+
+            <div className="header">
+                    <div className="headerLinks">
+                        <ul>
+                            <li>
+                                <Link to="/home"className="headerItem">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about" className="headerItem">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/barbers" className="headerItem">Barbers</Link>
+                            </li>
+                            <li>
+                                <Link to="/services" className="headerItem">Services</Link>
+                            </li>
+                            <li>
+                                <Link to="/gallery" className="headerItem">Gallery</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact" className="headerItem">Contact</Link>
+                            </li>
+                            <li>
+                                <Link to="/location" className="headerItem">Location</Link>
+                            </li>
+                            <span className="login">
+                                { otherLinks }
+                            </span>
+                        </ul>
                     </div>
-                    <div className="menu">
-                            <div>
-                                <ul>
-                                    <li>
-                                        <Link to="/home">Home</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/about">About</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/barbers">Barbers</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/services">Services</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/gallery">Gallery</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/contact">Contact</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/location">Location</Link>
-                                    </li>
-                                    { otherLinks }
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </>
+            </div>
         )
     }
 }

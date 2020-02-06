@@ -1,7 +1,7 @@
 import React from "react"
 import Header2 from "./../header2.js"
 import ContactForm from "./contact_form.js"
-import FooterPage from "./footer.js"
+// import FooterPage from "./footer.js"
 import "./contactPage.scss"
 
 
