@@ -13,7 +13,7 @@ export default class ContactPage extends React.Component {
             <div className="contact-content" >  
             <Header2/>
             <ContactForm/>
-            {/* <FooterPage/> */}
+            <FooterPage/>
 
             </div>
 
