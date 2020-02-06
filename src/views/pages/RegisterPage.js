@@ -16,7 +16,8 @@ class RegisterPage extends Component {
                         <h1>Register a new user</h1><br />
                         <RegisterForm 
                         history={this.props.history}
-                        onRegister={this.props.onRegister} />
+                        onRegister={this.props.onRegister}
+                        currentUser={this.props.currentUser} />
                     </div>
                 </div>
             </div>
