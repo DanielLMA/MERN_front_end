@@ -4,7 +4,7 @@ import {Image, CloudinaryContext} from 'cloudinary-react'
 import axios from "axios"
 // import base64 from "base-64"
 import FooterPage from "./footer.js"
-import Header from "../header.js"
+import Header from "../header2.js"
 import "./gallery.scss"
 
 
@@ -111,6 +111,7 @@ export default class GalleryPage extends React.Component {
 
         return (
             <>
+            <Header/>
             <div className="gallery-container">
                     <div className="gallery-content">
                     <h1>Photo Gallery</h1>
