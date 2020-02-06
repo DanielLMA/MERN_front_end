@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import LoginForm from "../../components/Forms/fields/LoginForm";
 import "./LoginPage.scss"
 import Header from "../../header2"
+import FooterPage from "../footer.js"
+
 
 class LoginPage extends Component {
     render() {
@@ -16,9 +18,13 @@ class LoginPage extends Component {
                         <LoginForm 
                         history={this.props.history}
                         onLogin={this.props.onLogin} />
+                        
                     </div>
+                    <FooterPage/>
                 </div>
+                
             </div>
+            
 
             // <div className="login-body">
             //     <h1>User Login</h1>
