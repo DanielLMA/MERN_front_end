@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import LoginForm from "../../components/Forms/fields/LoginForm";
 import "./LoginPage.scss"
+import Header from "../../header2"
 
 class LoginPage extends Component {
     render() {
         
         return(
 
-
             <div className="contact-body">
+                <Header/>
                 <div className="contact-content">
                     <div className="formBackground">
                         <h1>Login</h1>
