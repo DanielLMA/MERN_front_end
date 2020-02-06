@@ -22,7 +22,8 @@ class LoginPage extends Component {
                     <h1>User Login</h1>
              <LoginForm 
                history={this.props.history}
-             onLogin={this.props.onLogin} />
+             onLogin={this.props.onLogin} 
+             currentUser={this.props.currentUser}/>
                
                     <div class="field">
                     
