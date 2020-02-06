@@ -85,10 +85,12 @@ export default class Header2 extends React.Component {
                             </li>
                             <span className="login">
                                 { otherLinks }
-                            </span>
+                            </span> 
                         </ul>
                     </div>
-            </div>
+            
+            {/* <img src="./images/raw_logo_white.png" /> */}
+        </div>
         )
     }
 }

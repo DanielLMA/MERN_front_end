@@ -4,46 +4,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-     font-family: Work Sans,sans-serif;
+     font-family: sans-serif;
      
 }
 
 body {
     overflow: hidden;
-    .barber-container {
-        position: relative;
-        height: 100vh;
-        width: 100vw; 
-        background-image: url("./views/images/haircut_pic.jpg") no-repeat;
-        background-size: cover; 
-        background-position: 50% 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        // &:before{
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        // }
-    }
-    .contact-container {
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-        background-image: url("./views/images/haircut_pic.jpg") no-repeat;
-
-        background-size: cover; 
-        background-position: 50% 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        // opacity: 0.2;
-    }
+    
+    
     .about-container {
         position: relative;
         height: 100vh;
@@ -72,94 +40,20 @@ body {
         position: relative;
         height: 100vh;
         width: 100vw;
-        background: url("./views/images/title_page_image.jpg") no-repeat;
+        background: url("./images/title_page_image.jpg") no-repeat;
         background-size: cover; 
         background-position: 50% 30%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        // &:before{
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background-color: rgba(0, 0, 0, 0.7);
-        // }
-        .logo {
-            
-        }
     }
 
     .content{
-        // @keyframes fadeIn
-        //  to { 
-        // opacity: 1; }
-
-        // .fade-in {
-        //     animation: fadeIn 1.0s ease forwards;
-        // }
-
-        // @keyframes fadeIn{
-        //     0% {
-        //       opacity:0;
-        //     }
-        //     100% {
-        //       opacity:1;
-        //     }
-        //   }
-          
-        //   @-moz-keyframes fadeIn {
-        //     0% {
-        //       opacity:0;
-        //     }
-        //     100% {
-        //       opacity:1;
-        //     }
-        //   }
-          
-        //   @-webkit-keyframes fadeIn {
-        //     0% {
-        //       opacity:0;
-        //     }
-        //     100% {
-        //       opacity:1;
-        //     }
-        //   }
-          
-        //   @-o-keyframes fadeIn {
-        //     0% {
-        //       opacity:0;
-        //     }
-        //     100% {
-        //       opacity:1;
-        //     }
-        //   }
-          
-        //   @-ms-keyframes fadeIn {
-        //     0% {
-        //       opacity:0;
-        //     }
-        //     100% {
-        //       opacity:1;
-        //     }
-        //   }
-
-        //   .fade-in {
-        //     animation: fadeIn ease 5s;
-        //     -webkit-animation: fadeIn ease 5s;
-        //     -moz-animation: fadeIn ease 5s;
-        //     -o-animation: fadeIn ease 5s;
-        //     -ms-animation: fadeIn ease 5s;
-        //   }
-
-        //return to this to fix page animations after fixing site styling
-
+        
         justify-self: center;
-        // background-color: rgba(255, 255, 255, 0.527);
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        background-color: rgba(255, 255, 255, 0.2);
+        // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         border-radius: 10px;
         max-width: 80vw;
         padding: 2rem;
@@ -174,7 +68,7 @@ body {
             // text-shadow: 2px 2px 2px #000000;
         }
         p {
-            color: black;
+            color: white;
             font-size: 1.2rem;
             font-weight: 100;
             // text-shadow: 2px 2px 2px #000000;
