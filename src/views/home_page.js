@@ -22,6 +22,7 @@ export default class HomePage extends React.Component {
             <>
                 <Header/>
                 <div className="container">
+                <div className="logo"></div>
                     <div className="content">
                         <h1>Welcome</h1>
                         <Link to="/appointments" className="btn">Book Appointment</Link>
