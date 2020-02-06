@@ -18,14 +18,15 @@ footer {
     #footer-box-2 {
         justify-self: center;
         img {
-            margin: 20px;
+            margin: 10px;
             min-height: 50px;
             max-height: 100px;
         }
     }
     #footer-links {
 
-        padding: 20px;
+        padding: 10px;
+        padding-top: 0px;
         grid-column-start: 1;
         grid-column-end: 4;
         width: 100vw;
